@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  begin_date: 2014-06-10 18:42:03
+  end_date: 2014-06-10 18:42:03
+  external_participant_salutation: MyString
+  external_participant_name: MyString
+  external_participant_company: MyString
+  clear_group_employee_salutation: MyString
+  clear_group_employee_name: MyString
+
+two:
+  begin_date: 2014-06-10 18:42:03
+  end_date: 2014-06-10 18:42:03
+  external_participant_salutation: MyString
+  external_participant_name: MyString
+  external_participant_company: MyString
+  clear_group_employee_salutation: MyString
+  clear_group_employee_name: MyString

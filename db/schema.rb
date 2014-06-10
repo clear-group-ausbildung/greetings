@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610154952) do
+ActiveRecord::Schema.define(version: 20140610164203) do
+
+  create_table "appointments", force: true do |t|
+    t.datetime "begin_date"
+    t.datetime "end_date"
+    t.string   "external_participant_salutation"
+    t.string   "external_participant_name"
+    t.string   "external_participant_company"
+    t.string   "clear_group_employee_salutation"
+    t.string   "clear_group_employee_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

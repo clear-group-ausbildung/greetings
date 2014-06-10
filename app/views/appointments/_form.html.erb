@@ -1,0 +1,45 @@
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :begin_date, "Termin Beginn" %></br>
+    <%= f.datetime_select :begin_date, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_date, "Termin Ende" %></br>
+    <%= f.datetime_select :end_date, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :external_participant_salutation, "Teilnehmer Anrede" %>
+    <%= f.text_field :external_participant_salutation, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :external_participant_name, "Teilnehmer Name" %>
+    <%= f.text_field :external_participant_name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :external_participant_company, "Teilnehmer Firma" %>
+    <%= f.text_field :external_participant_company, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :clear_group_employee_salutation, "Clear Group Mitarbeiter Anrede" %>
+    <%= f.text_field :clear_group_employee_salutation, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :clear_group_employee_name, "Clear Group Mitarbeiter Name" %>
+    <%= f.text_field :clear_group_employee_name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Termin anlegen", class: "btn btn-primary" %>
+  </div>
+<% end %>

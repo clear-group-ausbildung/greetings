@@ -20,17 +20,35 @@
         </li>
         <% unless user_signed_in? %>
           <li>
-            <%= link_to "Registrieren", new_user_registration_path %>
+            <%= link_to new_user_registration_path do %>
+              <span class="glyphicon glyphicon-pencil"></span> Registrieren
+            <% end %>
           </li>
           <li>
-            <%= link_to "Anmelden", new_user_session_path %>
+            <%= link_to new_user_session_path do %>
+              <span class="glyphicon glyphicon-log-in"></span> Anmelden
+            <% end %>
           </li> 
         <% else %>
           <li>
-            <%= link_to "Account-Einstellungen", edit_user_registration_path %>
+            <%= link_to new_appointment_path do %>
+              <span class="glyphicon glyphicon-plus"></span> Neuer Termin
+            <% end %>
+          </li>
+          <li>
+            <%= link_to appointments_path do %>
+               <span class="glyphicon glyphicon-list"></span> Termine
+            <% end %>
+          </li>
+          <li>
+            <%= link_to edit_user_registration_path do %>
+              <span class="glyphicon glyphicon-user"></span> Account Einstellungen
+            <% end %>
           </li> 
           <li>
-            <%= link_to "Abmelden", destroy_user_session_path, method: :delete %>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <span class="glyphicon glyphicon-log-out"></span> Abmelden
+            <% end %>
           </li>
         <% end %>
       </ul>
