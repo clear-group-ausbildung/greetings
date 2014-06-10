@@ -1,1 +1,10 @@
-<h1>HI</h1>
+<% @appointments.each do |appointment| %>
+	
+		
+			<div class="jumbotron center">
+				<p><h2><%= appointment.external_participant_salutation %> <%= appointment.external_participant_name %> <%= appointment.external_participant_company %></h2></p>
+				<p><h3>Bei: <%= appointment.clear_group_employee_salutation %> <%= appointment.clear_group_employee_name %></h3></p>
+			</div>
+		
+	
+<% end %>

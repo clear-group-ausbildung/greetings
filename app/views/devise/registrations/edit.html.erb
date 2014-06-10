@@ -22,17 +22,17 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.label :password %> <i>(Leer lassen, wenn keine &Auml;nderung gew&uuml;nscht ist)</i>
+        <%= f.label :password, "Passwort" %> <i>(Leer lassen, wenn keine &Auml;nderung gew&uuml;nscht ist)</i>
         <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation %>
+        <%= f.label :password_confirmation, "Passwort bestätigen" %>
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :current_password %> <i>(Wir ben&ouml;tigen dein derzeitiges Passwort um deine &Auml;nderungen zu best&auml;tigen.)</i>
+        <%= f.label :current_password, "Aktuelles Passwort" %> <i>(Wir ben&ouml;tigen dein derzeitiges Passwort um deine &Auml;nderungen zu best&auml;tigen.)</i>
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
       </div>
 
