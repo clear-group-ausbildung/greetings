@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-heading"> 
+		<p>Hallo <%= @resource.email %>!</p>
+	</div> <!-- /.panel-heading -->
+
+	<div class="panel-body">
+		<p>Dein Account wurde aufgrund einer hohen Anzahl fehlgeschlagener Anmeldeversuche gesperrt.
+
+		<p>Klicke den unten stehenden Link um deinen Account freizuschalten:</p>
+
+		<p><%= link_to 'Meinen Account entsperren', unlock_url(@resource, unlock_token: @token) %></p>
+  </div> <!-- /.panel-body -->
+</div> <!-- /.panel panel-default -->

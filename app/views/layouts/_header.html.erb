@@ -18,6 +18,21 @@
             <span class="glyphicon glyphicon-home"></span> Home
           <% end %>
         </li>
+        <% unless user_signed_in? %>
+          <li>
+            <%= link_to "Registrieren", new_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to "Anmelden", new_user_session_path %>
+          </li> 
+        <% else %>
+          <li>
+            <%= link_to "Account-Einstellungen", edit_user_registration_path %>
+          </li> 
+          <li>
+            <%= link_to "Abmelden", destroy_user_session_path, method: :delete %>
+          </li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->

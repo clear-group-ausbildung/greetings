@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+  <div class="panel-heading"> 
+		<p>Willkommen <%= @email %>!</p>
+	</div> <!-- /.panel-heading -->
+
+	<div class="panel-body">
+		<p>Du kannst deine Account Email mit dem unten stehenden Link best&auml;tigen:</p>
+
+		<p><%= link_to 'Meinen Account bestätigen', confirmation_url(@resource, confirmation_token: @token) %></p>
+  </div> <!-- /.panel-body -->
+</div> <!-- /.panel panel-default -->

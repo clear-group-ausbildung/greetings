@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+	<div class="panel-heading">	
+		<h2>Entsperrungsanweisungen erneut senden</h2>
+	</div> <!-- /.panel-heading -->
+
+	<div class="panel-body">
+		<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+		  <%= devise_error_messages! %>
+
+			<div class="form-group">
+		  	<%= f.label :email %>
+		  	<%= f.email_field :email, autofocus: true, class: "form-control" %>
+		  </div>
+
+			<div class="form-group">
+		  	<%= f.submit "Entsperrungsanweisungen erneut senden", class: "btn btn-primary" %>
+		  </div>
+		<% end %>
+	</div> <!-- /.panel-body -->
+
+	<div class="panel-footer">	
+		<%= render "devise/shared/links" %>
+	</div> <!-- /.panel-footer -->		
+</div> <!-- /.panel panel-default -->
