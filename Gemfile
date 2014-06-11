@@ -24,6 +24,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 # Include Devise Gem for user management
 gem 'devise', '~> 3.2.4'
+# Include Devise internationalisation gem
+gem 'devise-i18n', '~> 0.10.3'
+# Include Devise internationalisation gem for views
+gem 'devise-i18n-views', '~> 0.2.8'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
