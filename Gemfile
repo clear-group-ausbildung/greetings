@@ -28,6 +28,10 @@ gem 'devise', '~> 3.2.4'
 gem 'devise-i18n', '~> 0.10.3'
 # Include Devise internationalisation gem for views
 gem 'devise-i18n-views', '~> 0.2.8'
+# Include FullCalendar jQuery Gem
+gem 'fullcalendar2-rails', '~> 2.0.2.2'
+# Include MomentJS required for FullCalendar
+gem 'momentjs-rails', '~> 2.6.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
