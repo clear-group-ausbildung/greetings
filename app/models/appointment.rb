@@ -1,5 +1,10 @@
 class Appointment < ActiveRecord::Base
-
+	validates :begin_date, presence: true
+	validates :begin_time, presence: true
+	validates :end_time, presence: true
+	validates :external_participant_salutation, presence: true
+	validates :external_participant_name, presence: true
+	
 	# Defines boundaries within a appointment begin has to be, compared to +Time.now+, to be qualified for displaying.
 	#
 	# ==== Examples:
