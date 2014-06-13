@@ -16,7 +16,7 @@
 					<div class="row" id="one_appointment_row">
 						<div class="row" id="time_participant_row">
 							<div class="col-xs-2 col-md-2 col-md-offset-2" id="time_column">
-								<h3><%= appointment.begin_date.to_formatted_s(:time) %> Uhr</h3>
+								<h3><%= appointment.begin_time.to_formatted_s(:time) %> Uhr</h3>
 							</div> <!-- ./col time_column -->
 							<div class="col-xs-4 col-md-4" id="participant_column">
 								<h3><%= appointment.external_participant_salutation %> <%= appointment.external_participant_name %>, <%= appointment.external_participant_company %></h3>

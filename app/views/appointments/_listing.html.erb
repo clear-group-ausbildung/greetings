@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading"> 
-    <h1>Termine</h1>
+    <h2>Termine</h2>
   </div> <!-- /.panel-heading --> 
 
   <div class="panel-body">
@@ -19,8 +19,8 @@
       <tbody>
         <% @appointments.each do |appointment| %>
           <tr>
-            <td><%= appointment.begin_date.to_formatted_s("%A, %e.%m.%Y %H:%M Uhr") %></td>
-            <td><%= appointment.end_time.to_formatted_s("%A, %e.%m.%Y %H:%M Uhr") %></td>
+            <td><%= appointment.formatted_begin %></td>
+            <td><%= appointment.formatted_end %></td>
             <td><%= appointment.external_participant_salutation %> <%= appointment.external_participant_title %> <%= appointment.external_participant_name %></td>
             <td><%= appointment.external_participant_company %></td>
             <td><%= appointment.clear_group_employee_salutation %> <%= appointment.clear_group_employee_name %></td>
