@@ -10,7 +10,7 @@
 				<h2>Die Clear Group begr&uuml;&szlig;t heute:</h2>
 			</div> <!-- ./col greeting_column -->
 		</div> <!-- ./row greeting_row -->	
-		<div class="row" id="appointments_row">
+		<div class="row" id="refreshable">
 			<% @appointments.each do |appointment| %>
 				<% if appointment && appointment.is_showcasable? %>
 					<div class="row" id="one_appointment_row">
@@ -30,7 +30,7 @@
 					</div> <!-- ./row one_appointment_row -->
 				<% end %>	
 			<% end %>
-		</div> <!-- ./row appointments_row -->	
+		</div> <!-- ./row refreshable -->	
 	</div> <!-- ./jumbotron -->	
 </div> <!-- ./row jumbotron_row -->	
 <div class="row" id="date_time_row">
