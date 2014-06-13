@@ -9,10 +9,8 @@
         <tr>
           <th>Termin Beginn</th>
           <th>Termin Ende</th>
-          <th>Teilnehmer Anrede</th>
           <th>Teilnehmer Name</th>
           <th>Teilnehmer Firma</th>
-          <th>Clear Group Mitarbeiter Anrede</th>
           <th>Clear Group Mitarbeiter Name</th>
           <th colspan="3"></th>
         </tr>
@@ -21,13 +19,11 @@
       <tbody>
         <% @appointments.each do |appointment| %>
           <tr>
-            <td><%= appointment.begin_date %></td>
-            <td><%= appointment.end_date %></td>
-            <td><%= appointment.external_participant_salutation %></td>
-            <td><%= appointment.external_participant_name %></td>
+            <td><%= appointment.begin_date.to_formatted_s("%A, %e.%m.%Y %H:%M Uhr") %></td>
+            <td><%= appointment.end_time.to_formatted_s("%A, %e.%m.%Y %H:%M Uhr") %></td>
+            <td><%= appointment.external_participant_salutation %> <%= appointment.external_participant_title %> <%= appointment.external_participant_name %></td>
             <td><%= appointment.external_participant_company %></td>
-            <td><%= appointment.clear_group_employee_salutation %></td>
-            <td><%= appointment.clear_group_employee_name %></td>
+            <td><%= appointment.clear_group_employee_salutation %> <%= appointment.clear_group_employee_name %></td>
             <td><%= link_to 'Anzeigen', appointment %></td>
             <td><%= link_to 'Bearbeiten', edit_appointment_path(appointment) %></td>
             <td><%= link_to 'Löschen', appointment, method: :delete, data: { confirm: 'Bist Du sicher?' } %></td>

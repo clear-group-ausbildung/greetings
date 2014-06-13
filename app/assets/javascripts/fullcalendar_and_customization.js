@@ -43,5 +43,5 @@ $(document).ready(function() {
         dayClick: function(date, jsEvent, view) {
             alert('Tage geklickt: ' + date.format());
         }
-    })
+    });
 });

@@ -12,17 +12,25 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :begin_date, "Termin Beginn" %></br>
-    <%= f.datetime_select :begin_date, class: "form-control" %>
+    <%= f.label :begin_date, "Termin Beginn Datum" %>
+    <%= f.date_field :begin_date, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :end_date, "Termin Ende" %></br>
-    <%= f.datetime_select :end_date, class: "form-control" %>
+    <%= f.label :begin_time, "Termin Beginn Uhrzeit" %>  
+    <%= f.time_field :begin_time, class: "form_control" %>  
+  </div>
+  <div class="form-group">
+    <%= f.label :end_time, "Termin Ende Uhrzeit" %>
+    <%= f.time_field :end_time, class: "form_control" %>        
   </div>
   <div class="form-group">
     <%= f.label :external_participant_salutation, "Teilnehmer Anrede" %>
     <%= f.text_field :external_participant_salutation, class: "form-control" %>
   </div>
+  <div class="form-group">
+    <%= f.label :external_participant_title, "Teilnehmer Titel" %>
+    <%= f.text_field :external_participant_title, class: "form-control" %>
+  </div>  
   <div class="form-group">
     <%= f.label :external_participant_name, "Teilnehmer Name" %>
     <%= f.text_field :external_participant_name, class: "form-control" %>

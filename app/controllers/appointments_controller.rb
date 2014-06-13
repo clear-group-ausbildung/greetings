@@ -70,6 +70,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:begin_date, :end_date, :external_participant_salutation, :external_participant_name, :external_participant_company, :clear_group_employee_salutation, :clear_group_employee_name)
+      params.require(:appointment).permit(:begin_date, :begin_time, :end_time, :external_participant_salutation, :external_participant_title, :external_participant_name, :external_participant_company, :clear_group_employee_salutation, :clear_group_employee_name)
     end
 end
