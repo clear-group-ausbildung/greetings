@@ -12,42 +12,42 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :begin_date, "Termin Beginn Datum" %>
+    <%= f.label :begin_date, 'Termin Beginn Datum' %>
     <%= f.date_field :begin_date, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :begin_time, "Termin Beginn Uhrzeit" %>  
+    <%= f.label :begin_time, 'Termin Beginn Uhrzeit' %>  
     <%= f.time_field :begin_time, class: "form_control" %>  
   </div>
   <div class="form-group">
-    <%= f.label :end_time, "Termin Ende Uhrzeit" %>
+    <%= f.label :end_time, 'Termin Ende Uhrzeit' %>
     <%= f.time_field :end_time, class: "form_control" %>        
   </div>
   <div class="form-group">
-    <%= f.label :external_participant_salutation, "Teilnehmer Anrede" %>
+    <%= f.label :external_participant_salutation, 'Teilnehmer Anrede' %>
     <%= f.text_field :external_participant_salutation, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :external_participant_title, "Teilnehmer Titel" %>
+    <%= f.label :external_participant_title, 'Teilnehmer Titel' %>
     <%= f.text_field :external_participant_title, class: "form-control" %>
   </div>  
   <div class="form-group">
-    <%= f.label :external_participant_name, "Teilnehmer Name" %>
+    <%= f.label :external_participant_name, 'Teilnehmer Name' %>
     <%= f.text_field :external_participant_name, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :external_participant_company, "Teilnehmer Firma" %>
+    <%= f.label :external_participant_company, 'Teilnehmer Firma' %>
     <%= f.text_field :external_participant_company, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :clear_group_employee_salutation, "Clear Group Mitarbeiter Anrede" %>
+    <%= f.label :clear_group_employee_salutation, 'Clear Group Mitarbeiter Anrede' %>
     <%= f.text_field :clear_group_employee_salutation, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :clear_group_employee_name, "Clear Group Mitarbeiter Name" %>
+    <%= f.label :clear_group_employee_name, 'Clear Group Mitarbeiter Name' %>
     <%= f.text_field :clear_group_employee_name, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.submit "Termin anlegen", class: "btn btn-primary" %>
+    <%= f.submit "Speichern", class: "btn btn-primary" %>
   </div>
 <% end %>

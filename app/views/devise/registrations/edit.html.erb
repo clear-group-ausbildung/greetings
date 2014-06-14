@@ -8,32 +8,32 @@
       <%= devise_error_messages! %>
 
       <div class="form-group">
-         <%= f.label :name %>
+         <%= f.label :name, 'Name' %>
          <%= f.text_field :name, autofocus: true, class: "form-control" %>
       </div>      
 
       <div class="form-group">
-        <%= f.label :email %>
+        <%= f.label :email, 'E-Mail' %>
         <%= f.email_field :email, class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', default: 'leave blank if you do not want to change it') %>)</i>
+        <%= f.label :password, 'Passwort' %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', default: 'leave blank if you do not want to change it') %>)</i>
         <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation %>
+        <%= f.label :password_confirmation, 'Passwort bestätigen' %>
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', default: 'we need your current password to confirm your changes') %>)</i>
+        <%= f.label :current_password, 'Aktuelles Passwort' %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', default: 'we need your current password to confirm your changes') %>)</i>
         <%= f.password_field :current_password,  autocomplete: "off", class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.submit t('.update', default: 'Update'), class: "btn btn-primary" %>
+        <%= f.submit t('.update', default: 'Speichern'), class: "btn btn-primary" %>
       </div>
     <% end %>
   </div> <!-- /.panel-body -->
