@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Clear Group", root_path, class: "navbar-brand" %>
+      <%= link_to image_tag("../images/logo-navbar.png", class: "navbar-brand-image"), root_path, class: "navbar-brand" %>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -27,9 +27,14 @@
         <% else %>
           <li>
             <%= link_to appointments_path do %>
-               <span class="glyphicon glyphicon-list"></span> Termine
+               <span class="glyphicon glyphicon-calendar"></span> Kalender
             <% end %>
           </li>
+          <li>
+            <%= link_to "#" do %>
+               <span class="glyphicon glyphicon-list"></span> Termine
+            <% end %>
+          </li>          
           <li>
             <%= link_to new_appointment_path do %>
               <span class="glyphicon glyphicon-plus"></span> Neuer Termin

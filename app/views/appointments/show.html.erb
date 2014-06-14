@@ -1,6 +1,48 @@
 <div class="panel panel-default">
-  <div class="panel-heading"> 
-    <h2>Termindetails</h2>
-  </div> <!-- /.panel-heading --> 
+	<div class="panel-heading"> 
+  	<h2>Termindetails</h2>
+	</div> <!-- /.panel-heading -->
 
-</div> <!-- /.panel panel-default -->
+	<div class="panel-body">
+  	<div class="row">
+    	<div class="col-xs-6 col-md-2">
+      	<strong>Termin Beginn:</strong>
+			</div>
+      <div class="col-xs-6 col-md-9">
+      	<%= @appointment.formatted_begin %>
+      </div>
+    </div>
+ 
+    <div class="row">
+      <div class="col-xs-6 col-md-2">
+        <strong>Termin Ende:</strong>
+      </div>
+      <div class="col-xs-6 col-md-9">        
+        <%= @appointment.formatted_end %>
+      </div>
+    </div>
+ 
+    <div class="row">
+      <div class="col-xs-6 col-md-2">
+        <strong>Teilnehmer:</strong>
+      </div>
+      <div class="col-xs-6 col-md-9">                
+        <%= @appointment.external_participant_salutation %> <%= @appointment.external_participant_title %> <%= @appointment.external_participant_name %>, <%= @appointment.external_participant_company %>
+      </div>
+    </div>
+ 
+    <div class="row">
+      <div class="col-xs-6 col-md-2">
+        <strong>Clear Group Mitarbeiter:</strong>
+      </div>
+      <div class="col-xs-6 col-md-9">              
+        <%= @appointment.clear_group_employee_salutation %> <%= @appointment.clear_group_employee_name %>
+      </div>
+    </div>
+   </div> <!-- /.panel-body -->
+ 
+   <div class="panel-footer">
+     <%= link_to "Bearbeiten", edit_appointment_path(@appointment) %> |
+     <%= link_to 'Zurück', appointments_path %>
+   </div> <!-- /.panel-footer -->
+ </div> <!-- /.panel panel-default -->

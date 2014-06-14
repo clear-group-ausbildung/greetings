@@ -28,3 +28,8 @@ body {
 .jumbotron {
 	background: $jumbotron-half-transparent-bg-color-rgba;
 }
+
+.navbar-brand-image {
+	max-width:250px; 
+	margin-top: -8px;
+}

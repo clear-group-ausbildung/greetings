@@ -26,12 +26,12 @@
             <td><%= appointment.clear_group_employee_salutation %> <%= appointment.clear_group_employee_name %></td>
             <td><%= link_to 'Anzeigen', appointment %></td>
             <td><%= link_to 'Bearbeiten', edit_appointment_path(appointment) %></td>
-            <td><%= link_to 'Löschen', appointment, method: :delete, data: { confirm: 'Bist Du sicher?' } %></td>
+            <td><%= link_to 'Löschen', appointment, method: :delete, data: { confirm: 'Wollen Sie den Termin wirklich löschen?' } %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
-  </div>
+  </div> <!-- /.panel-body -->
 
   <div class="panel-footer">
     <%= link_to 'Neuer Termin', new_appointment_path %>

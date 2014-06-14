@@ -72,6 +72,16 @@ class Appointment < ActiveRecord::Base
 		formatted_date_time begin_date, end_time 
 	end
 
+	# Returns the merged appointment begin date and time.
+	def merged_begin_date_time
+		merge_date_time begin_date, begin_time
+	end
+
+	# Returns the merged appointment end date and time.
+	def merged_end_date_time
+		merge_date_time begin_date, end_time
+	end
+
 	# Returns a more human readable String representation of an +Appointment+.
 	def to_s
 		"Appointment:
