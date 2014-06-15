@@ -22,6 +22,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # Include Bootstrap Gem
 gem 'bootstrap-sass'
+# Include Bootstrap Datepicker Gem
+gem 'bootstrap-datepicker-rails', '~> 1.3.0.2'
 # Include Devise Gem for user management
 gem 'devise', '~> 3.2.4'
 # Include Devise internationalisation gem
