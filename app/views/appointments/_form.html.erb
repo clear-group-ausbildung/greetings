@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :begin_date, 'Termin Beginn Datum' %>
+    <%= f.label :begin_date, 'Datum' %>
     <div class="input-group date">
       <%= f.text_field :begin_date, class: "form-control" %>
       <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
     </div> 
   </div>
   <div class="form-group">
-    <%= f.label :begin_time, 'Termin Beginn Uhrzeit' %> </br>
-    <%= f.time_select :begin_time, { minute_step: 15 }, class: "selectpicker" %>   
-  </div>  
-  <div class="form-group">
-    <%= f.label :end_time, 'Termin Ende Uhrzeit' %> </br>
-    <%= f.time_select :end_time, { minute_step: 15 }, class: "selectpicker" %>        
+    <%= f.label :begin_time, 'Von' %></br>
+    <%= f.time_select :begin_time, { minute_step: 15 }, { 'data-width' => "auto", class: "selectpicker" } %> <%= f.label 'Uhr' %>
   </div>
   <div class="form-group">
-    <%= f.label :external_participant_salutation, 'Teilnehmer Anrede' %>
-    <%= f.text_field :external_participant_salutation, class: "form-control" %>
+    <%= f.label :end_time, 'Bis' %></br>
+    <%= f.time_select :end_time, { minute_step: 15 }, { 'data-width' => "auto", class: "selectpicker" } %> <%= f.label 'Uhr' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :external_participant_salutation, 'Teilnehmer Anrede' %> </br>
+    <%= f.select( :external_participant_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "auto", :class => "selectpicker"} ) %>
   </div>
   <div class="form-group">
     <%= f.label :external_participant_title, 'Teilnehmer Titel' %>
@@ -43,8 +43,8 @@
     <%= f.text_field :external_participant_company, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :clear_group_employee_salutation, 'Clear Group Mitarbeiter Anrede' %>
-    <%= f.text_field :clear_group_employee_salutation, class: "form-control" %>
+    <%= f.label :clear_group_employee_salutation, 'Clear Group Mitarbeiter Anrede' %> </br>
+    <%= f.select( :clear_group_employee_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "auto", :class => "selectpicker"} ) %>
   </div>
   <div class="form-group">
     <%= f.label :clear_group_employee_name, 'Clear Group Mitarbeiter Name' %>
