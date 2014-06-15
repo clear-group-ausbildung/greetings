@@ -19,12 +19,12 @@
     </div> 
   </div>
   <div class="form-group">
-    <%= f.label :begin_time, 'Termin Beginn Uhrzeit' %>  
-    <%= f.time_field :begin_time, class: "form_control" %>  
-  </div>
+    <%= f.label :begin_time, 'Termin Beginn Uhrzeit' %> </br>
+    <%= f.time_select :begin_time, { minute_step: 15 }, class: "selectpicker" %>   
+  </div>  
   <div class="form-group">
-    <%= f.label :end_time, 'Termin Ende Uhrzeit' %>
-    <%= f.time_field :end_time, class: "form_control" %>        
+    <%= f.label :end_time, 'Termin Ende Uhrzeit' %> </br>
+    <%= f.time_select :end_time, { minute_step: 15 }, class: "selectpicker" %>        
   </div>
   <div class="form-group">
     <%= f.label :external_participant_salutation, 'Teilnehmer Anrede' %>
