@@ -19,4 +19,6 @@
 //= require jquery.turbolinks
 //= require turbolinks
 //= require moment
+//= require fullcalendar
+//= require lang-all
 //= require_tree .
