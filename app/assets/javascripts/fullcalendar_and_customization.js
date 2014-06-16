@@ -1,14 +1,14 @@
 $(document).ready(function() {
     $('#calendar').fullCalendar({
         // put your options and callbacks here
-        lang: 'de',
         header: {
             left: 'prev,next prevYear,nextYear today',
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
         },
+        lang: 'de',
         defaultView :'month',
-        weekends: true,
+        weekends: false,
         weekMode: 'liquid',
         height: 700,
         selectable: true,
