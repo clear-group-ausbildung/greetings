@@ -12,23 +12,57 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :begin_date, 'Datum' %>
-    <div class="input-group date">
-      <%= f.text_field :begin_date, class: "form-control" %>
-      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">
+        <%= f.label :begin_date, 'Datum' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">    
+        <div class="input-group date">
+          <%= f.text_field :begin_date, class: "form-control" %>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </div>
+      </div>
     </div> 
   </div>
   <div class="form-group">
-    <%= f.label :begin_time, 'Von' %></br>
-    <%= f.time_select :begin_time, { minute_step: 15 }, { 'data-width' => "auto", class: "selectpicker" } %> <%= f.label 'Uhr' %>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">    
+        <%= f.label :begin_time, 'Von' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">    
+        <%= f.time_select :begin_time, { minute_step: 15 }, { 'data-width' => "47.93%", class: "selectpicker" } %>
+      </div>
+      <%= f.label 'Uhr' %>
+    </div>  
   </div>
   <div class="form-group">
-    <%= f.label :end_time, 'Bis' %></br>
-    <%= f.time_select :end_time, { minute_step: 15 }, { 'data-width' => "auto", class: "selectpicker" } %> <%= f.label 'Uhr' %>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">       
+        <%= f.label :end_time, 'Bis' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">       
+        <%= f.time_select :end_time, { minute_step: 15 }, { 'data-width' => "47.93%", class: "selectpicker" } %>
+      </div>
+      <%= f.label 'Uhr' %>
+    </div>
   </div>
   <div class="form-group">
-    <%= f.label :external_participant_salutation, 'Teilnehmer Anrede' %> </br>
-    <%= f.select( :external_participant_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "auto", :class => "selectpicker"} ) %>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">       
+        <%= f.label :external_participant_salutation, 'Teilnehmer Anrede' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">       
+        <%= f.select( :external_participant_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
+      </div>
+    </div>
   </div>
   <div class="form-group">
     <%= f.label :external_participant_title, 'Teilnehmer Titel' %>
@@ -43,8 +77,16 @@
     <%= f.text_field :external_participant_company, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :clear_group_employee_salutation, 'Clear Group Mitarbeiter Anrede' %> </br>
-    <%= f.select( :clear_group_employee_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "auto", :class => "selectpicker"} ) %>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">    
+        <%= f.label :clear_group_employee_salutation, 'Clear Group Mitarbeiter Anrede' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 col-md-4">       
+        <%= f.select( :clear_group_employee_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
+      </div>
+    </div>
   </div>
   <div class="form-group">
     <%= f.label :clear_group_employee_name, 'Clear Group Mitarbeiter Name' %>
