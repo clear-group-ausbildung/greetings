@@ -2,7 +2,6 @@ class Appointment < ActiveRecord::Base
 	include Timeable
 	validates :begin_date, presence: true
 	validates :begin_time, presence: true
-	validates :end_time, presence: true
 	validates :external_participant_salutation, presence: true
 	validates :external_participant_name, presence: true
 	
@@ -60,18 +59,6 @@ class Appointment < ActiveRecord::Base
 		formatted_date_time begin_date, begin_time 
 	end
 
-	# Returns a formatted String which merges the +begin_date+ and the +end_time+ of an +Appointment+.
-	# The format is localized by the default locale.
-	# See: 
-	# * +config/application.rb+ => +config.i18n.default_locale+
-	#
-	# ==== Example:
-	#
-	#   Freitag, 13. Juni 2014, 13:37 Uhr
-	def formatted_end 
-		formatted_date_time begin_date, end_time 
-	end
-
 	# Returns the merged appointment begin date and time.
 	def merged_begin_date_time
 		merge_date_time begin_date, begin_time
@@ -79,7 +66,7 @@ class Appointment < ActiveRecord::Base
 
 	# Returns the merged appointment end date and time.
 	def merged_end_date_time
-		merge_date_time begin_date, end_time
+		merge_date_time begin_date, begin_time + 60.minutes
 	end
 
 	# Returns a more human readable String representation of an +Appointment+.
@@ -87,7 +74,6 @@ class Appointment < ActiveRecord::Base
 		"Appointment:
 		[begin_date: #{begin_date};
 		begin_time: #{begin_time};
-		end_time: #{end_time};
 		external_participant_salutation: #{external_participant_salutation};
 		external_participant_title: #{external_participant_title};
 		external_participant_name: #{external_participant_name};

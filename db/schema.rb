@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616110455) do
+ActiveRecord::Schema.define(version: 20140618103748) do
 
   create_table "appointments", force: true do |t|
     t.date     "begin_date"
     t.time     "begin_time"
-    t.time     "end_time"
     t.string   "external_participant_salutation"
     t.string   "external_participant_title"
     t.string   "external_participant_name"
