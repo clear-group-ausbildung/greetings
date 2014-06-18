@@ -9,6 +9,7 @@
 
   <div class="panel-footer"> 
 		<%= link_to 'Anzeigen', @appointment %> |
+		<%= link_to 'Löschen', @appointment, method: :delete, data: { confirm: 'Wollen Sie den Termin wirklich löschen?' } %> |
 		<%= link_to 'Zurück', :back %>
 	</div> <!-- /.panel-footer -->
 </div> <!-- /.panel panel-default -->

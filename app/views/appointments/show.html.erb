@@ -34,6 +34,7 @@
  
    <div class="panel-footer">
      <%= link_to 'Bearbeiten', edit_appointment_path(@appointment) %> |
+     <%= link_to 'Löschen', @appointment, method: :delete, data: { confirm: 'Wollen Sie den Termin wirklich löschen?' } %> |
      <%= link_to 'Zurück', appointments_path %>
    </div> <!-- /.panel-footer -->
  </div> <!-- /.panel panel-default -->
