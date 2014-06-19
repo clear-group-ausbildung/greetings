@@ -27,7 +27,7 @@ gem 'bootstrap-sass'
 # Include Bootstrap Datepicker Gem
 gem 'bootstrap-datepicker-rails', '~> 1.3.0.2'
 # Include Bootstrap Select Gem
-gem 'bootstrap-select-wrapper-rails', '~> 1.5.6'
+gem 'bootstrap-select-wrapper-rails', '~> 1.5.7'
 # Include Devise Gem for user management
 gem 'devise', '~> 3.2.4'
 # Include Devise internationalisation gem
@@ -35,7 +35,7 @@ gem 'devise-i18n', '~> 0.10.3'
 # Include Devise internationalisation gem for views
 gem 'devise-i18n-views', '~> 0.2.8'
 # Require FullCalendar Gem
-gem 'fullcalendar-wrapper-rails', '~> 2.0.2'
+gem 'fullcalendar-wrapper-rails', '~> 2.0.3'
 # Include MomentJS required for FullCalendar
 gem 'momentjs-rails', '~> 2.6.0'
 # bundle exec rake doc:rails generates the API under doc/api.
