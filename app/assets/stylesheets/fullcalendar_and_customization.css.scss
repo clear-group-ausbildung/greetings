@@ -1,7 +1,9 @@
 @import 'fullcalendar';
 
-.fc-cell-highlight {
-	background: #eeeeee;
+.fc-event:hover {
+	color: #EC5E0A;
+	background-color: #FFFFFF;
+	font-weight: bolder;
 }
 
 .fc-event {
