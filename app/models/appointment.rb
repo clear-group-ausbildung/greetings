@@ -47,6 +47,15 @@ class Appointment < ActiveRecord::Base
 		showcasable
 	end
 
+	# Returns +true+ if an +Appointment* is eligible to be displayed in the showcase (weclome page).
+	#
+	# ==== To be eligible, the happointment has to be:
+	#
+	# * today
+	def is_simply_showcasable?
+		begin_date.today?
+	end
+
 	# Returns a formatted String which merges the +begin_date+ and the +begin_time+ of an +Appointment+.
 	# The format is localized by the default locale.
 	# See: 
