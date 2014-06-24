@@ -38,6 +38,8 @@ gem 'devise-i18n-views', '~> 0.2.8'
 gem 'fullcalendar-wrapper-rails', '~> 2.0.3'
 # Include MomentJS required for FullCalendar
 gem 'momentjs-rails', '~> 2.6.0'
+# Include jQuery qTip2 for tooltips
+gem 'jquery-qtip2-wrapper-rails', '~> 2.2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

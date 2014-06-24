@@ -21,4 +21,5 @@
 //= require moment
 //= require fullcalendar
 //= require lang-all
+//= require jquery.qtip
 //= require_tree .

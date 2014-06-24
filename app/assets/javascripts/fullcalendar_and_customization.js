@@ -18,8 +18,34 @@ $(document).ready(function() {
         slotDuration: '00:15:00',
         weekNumbers: true,
         events: '/appointments.json',
-        eventRender: function(event, element) {
-            element.attr('title', event.tooltip);
+        eventRender: function(event, element, view) { 
+            element.qtip({ 
+                style: { 
+                    classes: 'qtip-bootstrap' 
+                }, 
+                content: {
+                    title: moment(event.start).format('HH:mm')+' Uhr',
+                    text: event.tooltip
+                },
+                hide: {
+                    fixed: true,
+                    delay: 300
+                },
+                position: {
+                    my: 'top center',
+                    at: 'bottom center'
+                },
+                show: {
+                    effect: function() {
+                        $(this).slideDown();
+                    }
+                },
+                hide: {
+                    effect: function() {
+                        $(this).slideUp();
+                    }
+                }
+            });
         }
     });
 });
