@@ -3,7 +3,10 @@ class Appointment < ActiveRecord::Base
 	validates :begin_date, presence: true
 	validates :begin_time, presence: true
 	validates :external_participant_salutation, presence: true
-	validates :external_participant_name, presence: true
+	validates :external_participant_title, length: { maximum: 10 }
+	validates :external_participant_name, presence: true, length: { maximum: 20 }
+	validates :external_participant_company, length: { maximum: 20 }
+	validates :clear_group_employee_name, length: { maximum: 20 }
 	
 	# Defines boundaries within a appointment begin has to be, compared to +Time.now+, to be qualified for displaying.
 	#
