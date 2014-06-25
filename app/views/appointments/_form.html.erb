@@ -1,85 +1,84 @@
 <%= form_for(@appointment) do |f| %>
-  <% if @appointment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+<% if @appointment.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+  <ul>
+    <% @appointment.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-      <ul>
-      <% @appointment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-4 col-md-4">
+      <%= f.label :begin_date, t('.begin_date') %>
     </div>
-  <% end %>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-md-4">    
+      <div class="input-group date">
+        <%= f.text_field :begin_date, class: "form-control" %>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+      </div>
+    </div>
+  </div> 
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-4 col-md-4">    
+      <%= f.label :begin_time, t('.begin_time') %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-md-4">    
+      <%= f.time_select :begin_time, { minute_step: 15 }, { 'data-width' => "47.93%", class: "selectpicker" } %>
+    </div>
 
-  <div class="form-group">
-    <div class="row">
-      <div class="col-xs-4 col-md-4">
-        <%= f.label :begin_date, 'Datum' %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4 col-md-4">    
-        <div class="input-group date">
-          <%= f.text_field :begin_date, class: "form-control" %>
-          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-        </div>
-      </div>
-    </div> 
-  </div>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-xs-4 col-md-4">    
-        <%= f.label :begin_time, 'Uhrzeit' %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4 col-md-4">    
-        <%= f.time_select :begin_time, { minute_step: 15 }, { 'data-width' => "47.93%", class: "selectpicker" } %>
-      </div>
-      <%= f.label 'Uhr' %>
-    </div>  
-  </div>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-xs-4 col-md-4">       
-        <%= f.label :external_participant_salutation, 'Teilnehmer Anrede' %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4 col-md-4">       
-        <%= f.select( :external_participant_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :external_participant_title, 'Teilnehmer Titel' %>
-    <%= f.text_field :external_participant_title, class: "form-control" %>
   </div>  
-  <div class="form-group">
-    <%= f.label :external_participant_name, 'Teilnehmer Name' %>
-    <%= f.text_field :external_participant_name, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :external_participant_company, 'Teilnehmer Firma' %>
-    <%= f.text_field :external_participant_company, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-xs-4 col-md-4">    
-        <%= f.label :clear_group_employee_salutation, 'Clear Group Mitarbeiter Anrede' %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4 col-md-4">       
-        <%= f.select( :clear_group_employee_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
-      </div>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-4 col-md-4">       
+      <%= f.label :external_participant_salutation, t('.external_participant_salutation') %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :clear_group_employee_name, 'Clear Group Mitarbeiter Name' %>
-    <%= f.text_field :clear_group_employee_name, class: "form-control" %>
+  <div class="row">
+    <div class="col-xs-4 col-md-4">       
+      <%= f.select( :external_participant_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.submit "Speichern", class: "btn btn-primary" %>
+</div>
+<div class="form-group">
+  <%= f.label :external_participant_title, t('.external_participant_title') %>
+  <%= f.text_field :external_participant_title, class: "form-control" %>
+</div>  
+<div class="form-group">
+  <%= f.label :external_participant_name, t('.external_participant_name') %>
+  <%= f.text_field :external_participant_name, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :external_participant_company, t('.external_participant_company') %>
+  <%= f.text_field :external_participant_company, class: "form-control" %>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-xs-4 col-md-4">    
+      <%= f.label :clear_group_employee_salutation, t('.clear_group_employee_salutation') %>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-xs-4 col-md-4">       
+      <%= f.select( :clear_group_employee_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label :clear_group_employee_name, t('.clear_group_employee_name') %>
+  <%= f.text_field :clear_group_employee_name, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.submit t('.submit'), class: "btn btn-primary" %>
+</div>
 <% end %>

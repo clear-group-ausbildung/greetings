@@ -16,38 +16,38 @@
         <% unless user_signed_in? %>
           <li>
             <%= link_to new_user_registration_path do %>
-              <span class="glyphicon glyphicon-pencil"></span> Registrieren
+              <span class="glyphicon glyphicon-pencil"></span> <%= t('.register') %>
             <% end %>
           </li>
           <li>
             <%= link_to new_user_session_path do %>
-              <span class="glyphicon glyphicon-log-in"></span> Anmelden
+              <span class="glyphicon glyphicon-log-in"></span> <%= t('.sign_in') %>
             <% end %>
           </li> 
         <% else %>
           <li>
             <%= link_to appointments_path do %>
-               <span class="glyphicon glyphicon-calendar"></span> Kalender
+               <span class="glyphicon glyphicon-calendar"></span> <%= t('.calendar') %>
             <% end %>
           </li>
           <li>
             <%= link_to appointments_list_path do %>
-               <span class="glyphicon glyphicon-list"></span> Termine
+               <span class="glyphicon glyphicon-list"></span> <%= t('.appointments') %>
             <% end %>
           </li>          
           <li>
             <%= link_to new_appointment_path do %>
-              <span class="glyphicon glyphicon-plus"></span> Neuer Termin
+              <span class="glyphicon glyphicon-plus"></span> <%= t('.new_appointment') %>
             <% end %>
           </li>
           <li>
             <%= link_to edit_user_registration_path do %>
-              <span class="glyphicon glyphicon-user"></span> Account Einstellungen
+              <span class="glyphicon glyphicon-user"></span> <%= t('.account_settings') %>
             <% end %>
           </li> 
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
-              <span class="glyphicon glyphicon-log-out"></span> Abmelden
+              <span class="glyphicon glyphicon-log-out"></span> <%= t('.sign_out') %>
             <% end %>
           </li>
         <% end %>

@@ -40,6 +40,8 @@ gem 'fullcalendar-wrapper-rails', '~> 2.0.3'
 gem 'momentjs-rails', '~> 2.6.0'
 # Include jQuery qTip2 for tooltips
 gem 'jquery-qtip2-wrapper-rails', '~> 2.2.0'
+# Include i18n Gem for internationalisation
+gem 'rails-i18n', '~> 4.0.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

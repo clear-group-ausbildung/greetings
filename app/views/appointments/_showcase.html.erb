@@ -7,7 +7,7 @@
 	<div class="jumbotron">
 		<div class="row" id="greeting_row">
 			<div class="col-xs-8 col-md-8 col-md-offset-1" id="greeting_column">
-				<h2>Die Clear Group begr&uuml;&szlig;t heute:</h2>
+				<h2><%= t('.greeting_html') %>:</h2>
 			</div> <!-- ./col greeting_column -->
 		</div> <!-- ./row greeting_row -->	
 		<div class="row" id="refreshable">
@@ -16,7 +16,7 @@
 					<div class="row" id="one_appointment_row">
 						<div class="row" id="time_participant_row">
 							<div class="col-xs-2 col-md-2 col-md-offset-2" id="time_column">
-								<h3><%= appointment.begin_time.to_formatted_s(:time) %> Uhr</h3>
+								<h3><%= appointment.begin_time.to_formatted_s(:time) %> <%= t('.clock')%></h3>
 							</div> <!-- ./col time_column -->
 							<div class="col-xs-8 col-md-8" id="participant_column">
 								<h3><%= appointment.external_participant_salutation %> <%= appointment.external_participant_title %> <%= appointment.external_participant_name %>, <%= appointment.external_participant_company %></h3>

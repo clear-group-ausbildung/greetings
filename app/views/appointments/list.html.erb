@@ -1,16 +1,16 @@
 <div class="panel panel-default">
   <div class="panel-heading"> 
-    <h2>Termine</h2>
+    <h2><%= t('.heading') %></h2>
   </div> <!-- /.panel-heading --> 
 
   <div class="panel-body">
     <table class="table">
       <thead>
         <tr>
-          <th>Termin</th>
-          <th>Teilnehmer</th>
-          <th>Teilnehmer Firma</th>
-          <th>Clear Group Mitarbeiter</th>
+          <th><%= t('.table_header_column_appointment') %></th>
+          <th><%= t('.table_header_column_external_participant') %></th>
+          <th><%= t('.table_header_column_external_participant_company') %></th>
+          <th><%= t('.table_header_column_clear_group_employee') %></th>
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -22,9 +22,9 @@
             <td><%= appointment.external_participant_salutation %> <%= appointment.external_participant_title %> <%= appointment.external_participant_name %></td>
             <td><%= appointment.external_participant_company %></td>
             <td><%= appointment.clear_group_employee_salutation %> <%= appointment.clear_group_employee_name %></td>
-            <td><%= link_to 'Anzeigen', appointment %></td>
-            <td><%= link_to 'Bearbeiten', edit_appointment_path(appointment) %></td>
-            <td><%= link_to 'Löschen', appointment, method: :delete, data: { confirm: 'Wollen Sie den Termin wirklich löschen?' } %></td>
+            <td><%= link_to t('.show'), appointment %></td>
+            <td><%= link_to t('.edit'), edit_appointment_path(appointment) %></td>
+            <td><%= link_to t('.destroy'), appointment, method: :delete, data: { confirm: t('.confirm') } %></td>
           </tr>
         <% end %>
       </tbody>
@@ -32,6 +32,6 @@
   </div> <!-- /.panel-body -->
 
   <div class="panel-footer">
-    <%= link_to 'Neuer Termin', new_appointment_path %>
+    <%= link_to t('.new_appointment'), new_appointment_path %>
   </div> <!-- /.panel-footer -->
 </div> <!-- /.panel panel-default -->

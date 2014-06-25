@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading"> 
-		<h2>Termin bearbeiten</h2>
+		<h2><%= t('.heading') %></h2>
   </div> <!-- /.panel-heading -->		
 
   <div class="panel-body">  
@@ -8,8 +8,8 @@
   </div> <!-- /.panel-body -->
 
   <div class="panel-footer"> 
-		<%= link_to 'Anzeigen', @appointment %> |
-		<%= link_to 'Löschen', @appointment, method: :delete, data: { confirm: 'Wollen Sie den Termin wirklich löschen?' } %> |
-		<%= link_to 'Zurück', :back %>
+		<%= link_to t('.show'), @appointment %> |
+		<%= link_to t('.destroy'), @appointment, method: :delete, data: { confirm: t('.confirm') } %> |
+		<%= link_to t('.back'), :back %>
 	</div> <!-- /.panel-footer -->
 </div> <!-- /.panel panel-default -->
