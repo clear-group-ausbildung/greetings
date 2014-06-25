@@ -1,12 +1,8 @@
 class Appointment < ActiveRecord::Base
 	include Timeable
-	validates :begin_date, presence: true
-	validates :begin_time, presence: true
-	validates :external_participant_salutation, presence: true
+	validates :begin_date, :begin_time, :external_participant_salutation, :external_participant_title, :external_participant_name, :external_participant_company, presence: true
 	validates :external_participant_title, length: { maximum: 10 }
-	validates :external_participant_name, presence: true, length: { maximum: 20 }
-	validates :external_participant_company, length: { maximum: 20 }
-	validates :clear_group_employee_name, length: { maximum: 20 }
+	validates :external_participant_name, :external_participant_company, :clear_group_employee_name, length: { maximum: 50 }
 	
 	# Defines boundaries within a appointment begin has to be, compared to +Time.now+, to be qualified for displaying.
 	#
@@ -85,18 +81,18 @@ class Appointment < ActiveRecord::Base
 	def to_s
 		"Appointment:
 		[begin_date: #{begin_date};
-		begin_time: #{begin_time};
-		external_participant_salutation: #{external_participant_salutation};
-		external_participant_title: #{external_participant_title};
-		external_participant_name: #{external_participant_name};
-		external_participant_company: #{external_participant_company};
-		clear_group_employee_salutation: #{clear_group_employee_salutation};
-		clear_group_employee_name: #{clear_group_employee_name};
-		created_at: #{created_at};
-		updated_at: #{updated_at}"
-	end
+			begin_time: #{begin_time};
+			external_participant_salutation: #{external_participant_salutation};
+			external_participant_title: #{external_participant_title};
+			external_participant_name: #{external_participant_name};
+			external_participant_company: #{external_participant_company};
+			clear_group_employee_salutation: #{clear_group_employee_salutation};
+			clear_group_employee_name: #{clear_group_employee_name};
+			created_at: #{created_at};
+			updated_at: #{updated_at}"
+		end
 
-	private
+		private
 
 		# Returns +true+ if the +begin_time+ of the +Appointment+ is before +Time.now+.
 		def begin_time_before_now?
@@ -113,4 +109,4 @@ class Appointment < ActiveRecord::Base
 			time_after_now? begin_time
 		end
 
-end
+	end
