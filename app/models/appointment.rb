@@ -1,6 +1,6 @@
 class Appointment < ActiveRecord::Base
 	include Timeable
-	validates :begin_date, :begin_time, :external_participant_salutation, :external_participant_title, :external_participant_name, :external_participant_company, presence: true
+	validates :begin_date, :begin_time, :external_participant_salutation, :external_participant_name, :external_participant_company, presence: true
 	validates :external_participant_title, length: { maximum: 10 }
 	validates :external_participant_name, :external_participant_company, :clear_group_employee_name, length: { maximum: 50 }
 	
