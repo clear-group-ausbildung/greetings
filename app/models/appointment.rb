@@ -3,6 +3,8 @@ class Appointment < ActiveRecord::Base
 	validates :begin_date, :begin_time, :external_participant_salutation, :external_participant_name, presence: true
 	validates :external_participant_title, length: { maximum: 10 }
 	validates :external_participant_name, :external_participant_company, :clear_group_employee_name, length: { maximum: 50 }
+	validate :validate_conditional_employee_salutation
+	validate :validate_conditional_employee_name
 	
 	# Defines boundaries within a appointment begin has to be, compared to +Time.now+, to be qualified for displaying.
 	#
@@ -11,6 +13,20 @@ class Appointment < ActiveRecord::Base
 	# If the appointment has not yet begun, then the appointment will be displayed, if the begin is 30 minutes or less to +Time.now+
 	# If the appointment has already begun, then the appointment will be displayed, if the begin was 15 minutes or less from +Time.now+
 	BOUNDARIES = { begin_before: 30, begin_after: 15 }
+
+	# Validates the clear_group_employee_salutation
+	def validate_conditional_employee_salutation
+		if clear_group_employee_name.present? and clear_group_employee_salutation.empty?
+			errors.add(:clear_group_employee_salutation, I18n.t('errors.messages.blank', attribute: :clear_group_employee_salutation))
+		end
+	end
+
+	# Validates the clear_group_employee_name
+	def validate_conditional_employee_name
+		if clear_group_employee_salutation.present? and clear_group_employee_name.empty?
+			errors.add(:clear_group_employee_name, I18n.t('errors.messages.blank', attribute: :clear_group_employee_name))
+		end
+	end
 
 	# Returns +true+ if an +Appointment+ is eligible to be displayed in the showcase (welcome page).
 	# 
