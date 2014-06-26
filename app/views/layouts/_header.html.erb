@@ -15,11 +15,6 @@
       <ul class="nav navbar-nav navbar-right">
         <% unless user_signed_in? %>
           <li>
-            <%= link_to new_user_registration_path do %>
-              <span class="glyphicon glyphicon-pencil"></span> <%= t('.register') %>
-            <% end %>
-          </li>
-          <li>
             <%= link_to new_user_session_path do %>
               <span class="glyphicon glyphicon-log-in"></span> <%= t('.sign_in') %>
             <% end %>
