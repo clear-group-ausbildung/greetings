@@ -46,7 +46,7 @@
   </div>
   <div class="row">
     <div class="col-xs-4 col-md-4">       
-      <%= f.select( :external_participant_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
+      <%= f.select( :external_participant_salutation, @appointment.options_for_salutation, { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
     </div>
   </div>
 </div>
@@ -70,7 +70,7 @@
   </div>
   <div class="row">
     <div class="col-xs-4 col-md-4">       
-      <%= f.select( :clear_group_employee_salutation, options_for_select( [ ['Herr', 'Herr'], ['Frau', 'Frau'] ] ), { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
+      <%= f.select( :clear_group_employee_salutation, @appointment.options_for_salutation, { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
     </div>
   </div>
 </div>

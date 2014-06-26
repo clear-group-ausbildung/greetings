@@ -1,6 +1,6 @@
 class Appointment < ActiveRecord::Base
 	include Timeable
-	validates :begin_date, :begin_time, :external_participant_salutation, :external_participant_name, :external_participant_company, presence: true
+	validates :begin_date, :begin_time, :external_participant_salutation, :external_participant_name, presence: true
 	validates :external_participant_title, length: { maximum: 10 }
 	validates :external_participant_name, :external_participant_company, :clear_group_employee_name, length: { maximum: 50 }
 	
@@ -46,13 +46,27 @@ class Appointment < ActiveRecord::Base
 		showcasable
 	end
 
-	# Returns +true+ if an +Appointment* is eligible to be displayed in the showcase (weclome page).
+	# Returns +true+ if an +Appointment+ is eligible to be displayed in the showcase (weclome page).
 	#
 	# ==== To be eligible, the happointment has to be:
 	#
 	# * today
 	def is_simply_showcasable?
 		begin_date.today?
+	end
+
+	# Returns +true+ if an +Appointment+ has a participating +employee+.
+	def has_employee?
+		clear_group_employee_salutation? and clear_group_employee_name?
+	end
+
+	# Returns an +array+ of options for valid salutations.
+	def options_for_salutation
+		[
+			['Keine Auswahl', ''],
+			['Herr', 'Herr'],
+			['Frau', 'Frau']
+		]
 	end
 
 	# Returns a formatted String which merges the +begin_date+ and the +begin_time+ of an +Appointment+.

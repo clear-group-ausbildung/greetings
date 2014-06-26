@@ -18,7 +18,7 @@
         <strong><%= t('.external_participant') %>:</strong>
       </div>
       <div class="col-xs-6 col-md-9">                
-        <%= @appointment.external_participant_salutation %> <%= @appointment.external_participant_title %> <%= @appointment.external_participant_name %>, <%= @appointment.external_participant_company %>
+        <%= @appointment.external_participant_salutation %> <%= @appointment.external_participant_title %> <%= @appointment.external_participant_name %><% if @appointment.external_participant_company? %>, <%= @appointment.external_participant_company %><% end %>
       </div>
     </div>
  
