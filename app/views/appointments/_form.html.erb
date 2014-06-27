@@ -19,7 +19,7 @@
   <div class="row">
     <div class="col-xs-4 col-md-4">    
       <div class="input-group date">
-        <%= f.text_field :begin_date, class: "form-control" %>
+        <%= f.text_field :begin_date, value: @appointment.begin_date_nullsafe, class: "form-control" %>
         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
       </div>
     </div>

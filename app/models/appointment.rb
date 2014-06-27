@@ -14,6 +14,15 @@ class Appointment < ActiveRecord::Base
 	# If the appointment has already begun, then the appointment will be displayed, if the begin was 15 minutes or less from +Time.now+
 	BOUNDARIES = { begin_before: 30, begin_after: 15 }
 
+	# Returns a formatted String representation of the begin date of the appointment.
+	def begin_date_nullsafe
+		if begin_date?
+			begin_date.strftime('%d.%m.%Y')
+		else
+			Date.today.strftime('%d.%m.%Y')
+		end
+	end 
+
 	# Validates the clear_group_employee_salutation
 	def validate_conditional_employee_salutation
 		if clear_group_employee_name.present? and clear_group_employee_salutation.empty?
