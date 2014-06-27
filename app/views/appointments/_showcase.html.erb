@@ -7,7 +7,7 @@
 	<div class="jumbotron">
 		<div class="row" id="greeting_row">
 			<div class="col-xs-8 col-md-8 col-md-offset-1" id="greeting_column">
-				<h2><%= t('.greeting_html') %>:</h2>
+				<h1><%= t('.greeting_html') %>:</h1>
 			</div> <!-- ./col greeting_column -->
 		</div> <!-- ./row greeting_row -->	
 		<div class="row" id="refreshable">
@@ -16,16 +16,16 @@
 					<div class="row" id="one_appointment_row">
 						<div class="row" id="time_participant_row">
 							<div class="col-xs-2 col-md-2 col-md-offset-2" id="time_column">
-								<h3><%= appointment.begin_time.to_formatted_s(:time) %> <%= t('.clock')%></h3>
+								<h2><%= appointment.begin_time.to_formatted_s(:time) %> <%= t('.clock')%></h2>
 							</div> <!-- ./col time_column -->
 							<div class="col-xs-8 col-md-8" id="participant_column">
-								<h3><%= appointment.external_participant_salutation %> <%= appointment.external_participant_title %> <%= appointment.external_participant_name %><% if appointment.external_participant_company? %>, <%= appointment.external_participant_company %><% end %></h3>
+								<h2><%= appointment.external_participant_salutation %> <%= appointment.external_participant_title %> <%= appointment.external_participant_name %><% if appointment.external_participant_company? %>, <%= appointment.external_participant_company %><% end %></h2>
 							</div> <!-- ./col particpiant_column -->							
 						</div> <!-- ./row time_participant_row -->
 						<% if appointment.has_employee? %>
 							<div class="row" id="employee_row">
 								<div class="col-xs-4 col-md-4 col-md-offset-4" id="employee_column">
-									<h4>Bei <%= appointment.clear_group_employee_salutation %> <%= appointment.clear_group_employee_name %></h4>
+									<h3>Bei <%= appointment.clear_group_employee_salutation %> <%= appointment.clear_group_employee_name %></h3>
 								</div> <!-- ./col employee_column -->						
 							</div> <!-- ./row employee_row -->
 						<% end %>	
