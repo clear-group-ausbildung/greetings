@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :showcase]
-  before_filter :disable_nav, only: [:showcase, :showcase2]
+  before_filter :disable_nav, only: [:showcase]
 
   # GET /appointments/list
   def list
@@ -10,11 +10,6 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/showcase
   def showcase
-    @appointments = Appointment.all
-  end
-
-  # GET /appointments/showcase2
-  def showcase2
     @appointments = Appointment.all
   end
 
