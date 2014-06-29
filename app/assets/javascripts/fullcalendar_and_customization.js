@@ -46,6 +46,9 @@ $(document).ready(function() {
                     }
                 }
             });
+        },
+        dayClick: function(date, jsEvent, view) {
+            document.location.href = "/appointments/new?begin_date=" + date.format();
         }
     });
 });
