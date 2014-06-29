@@ -10,7 +10,7 @@
 				<h1 class="scaled"><%= t('.greeting_html') %>:</h1>
 			</div> <!-- ./col greeting_column -->
 		</div> <!-- ./row greeting_row -->	
-		<div class="row" id="refreshable">
+		<div class="row">
 			<% @appointments.each do |appointment| %>
 				<% if appointment && appointment.is_simply_showcasable? %>
 					<div class="row" id="one_appointment_row">
