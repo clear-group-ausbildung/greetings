@@ -30,6 +30,9 @@ de:
     showcase:
       greeting_html: "Die Clear Group begr&uuml;&szlig;t heute"
       clock: "Uhr"
+    showcase2:
+      greeting_short_html: "begr&uuml;&szlig;t heute"
+      clock: "Uhr"
     edit:
       heading: "Termin bearbeiten"
       show: "Anzeigen"

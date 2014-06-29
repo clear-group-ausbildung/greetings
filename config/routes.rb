@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'appointments/list'
   get 'appointments/showcase'
+  get 'appointments/showcase2'
   resources :appointments
 
   devise_for :users

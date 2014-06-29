@@ -1,0 +1,43 @@
+<div class="row" id="logo">
+	<div class="col-xs-3 col-md-3" id="logo_column">
+		<img src="../images/logo.jpg" class="img-scaled-showcase2" alt="Clear Group Logo">
+	</div> <!-- ./col logo_column -->	
+	<div class="col-xs-6 col-md-6" id="greeting_column">
+		<h2 class="scaled"><%= t('.greeting_short_html') %>:</h2>
+	</div> <!-- ./col greeting_column -->
+</div> <!-- ./row logo-->
+<div class="row" id="jumbotron_row">
+	<div class="jumbotron">
+		<div class="row" id="refreshable">
+			<% @appointments.each do |appointment| %>
+				<% if appointment && appointment.is_simply_showcasable? %>
+					<div class="row" id="one_appointment_row">
+						<div class="row" id="time_participant_row">
+							<div class="col-xs-2 col-md-2 col-md-offset-2" id="time_column">
+								<h2><%= appointment.begin_time.to_formatted_s(:time) %> <%= t('.clock')%></h2>
+							</div> <!-- ./col time_column -->
+							<div class="col-xs-8 col-md-8" id="participant_column">
+								<h2><%= appointment.external_participant_salutation %> <%= appointment.external_participant_title %> <%= appointment.external_participant_name %><% if appointment.external_participant_company? %>, <%= appointment.external_participant_company %><% end %></h2>
+							</div> <!-- ./col particpiant_column -->							
+						</div> <!-- ./row time_participant_row -->
+						<% if appointment.has_employee? %>
+							<div class="row" id="employee_row">
+								<div class="col-xs-4 col-md-4 col-md-offset-4" id="employee_column">
+									<h3>Bei <%= appointment.clear_group_employee_salutation %> <%= appointment.clear_group_employee_name %></h3>
+								</div> <!-- ./col employee_column -->						
+							</div> <!-- ./row employee_row -->
+						<% end %>	
+					</div> <!-- ./row one_appointment_row -->
+				<% end %>	
+			<% end %>
+		</div> <!-- ./row refreshable -->	
+	</div> <!-- ./jumbotron -->	
+</div> <!-- ./row jumbotron_row -->	
+<div class="row" id="date_time_row">
+	<div class="col-xs-2 col-md-2 col-md-offset-10" id="date_time_column">
+		<div id="clock">
+			<div id="time" class="center"></div> <!-- ./time -->
+	  	<div id="date" class="center"></div> <!-- ./date -->
+	  </div> <!-- ./clock -->
+	</div> <!-- ./col date_time_column --> 
+</div> <!-- ./row date_time_row -->
