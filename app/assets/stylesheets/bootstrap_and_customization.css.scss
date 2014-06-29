@@ -19,7 +19,6 @@ $jumbotron-half-transparent-bg-color-rgba: rgba(246, 246, 246, 0.5);
 }
 
 body {
-
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -27,10 +26,18 @@ body {
 
 .jumbotron {
 	background: $jumbotron-half-transparent-bg-color-rgba;
-	margin-top: 5px;
+	padding: 0px;
 }
 
 .navbar-brand-image {
 	max-width:250px; 
 	margin-top: -12px;
+}
+
+h1.scaled {
+	font-size: 347%;
+}
+
+.img-scaled {
+		max-width: 250px;
 }
