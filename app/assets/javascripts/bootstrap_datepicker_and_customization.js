@@ -8,7 +8,7 @@ $(document).ready(function() {
     autoclose: true,
     todayHighlight: true
 	});
-	$('.input-group.date').datepicker('update', moment(get_url_param('begin_date')).format('DD.MM.YYYY'));
+	//$('.input-group.date').datepicker('update', moment(get_url_param('begin_date')).format('DD.MM.YYYY'));
 });	
 function get_url_param(name) {
   name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");

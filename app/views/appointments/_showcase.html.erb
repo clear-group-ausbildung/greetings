@@ -12,7 +12,7 @@
 		</div> <!-- ./row greeting_row -->	
 		<div class="row" id="refreshable">
 			<% @appointments.each do |appointment| %>
-				<% if appointment && appointment.is_simply_showcasable? %>
+				<% if appointment && appointment.is_showcasable? %>
 					<div class="row" id="one_appointment_row">
 						<div class="row" id="time_participant_row">
 							<div class="col-xs-2 col-md-2 col-md-offset-2" id="time_column">

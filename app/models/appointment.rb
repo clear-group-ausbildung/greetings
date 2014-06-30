@@ -38,6 +38,19 @@ class Appointment < ActiveRecord::Base
 	end
 
 	# Returns +true+ if an +Appointment+ is eligible to be displayed in the showcase (welcome page).
+	#
+	# If the current day has 5 or less appointmnets, the method +is_simply_showcasable+ does the check.
+	# If the current day has more than 5 appointments, the method +is_dynamically_showcasable+ does the check.
+	def is_showcasable?
+		appointments = Appointment.where(begin_date: Date.today).select("COUNT(*) AS total")
+		if appointments.first.total <= 5
+			is_simply_showcasable?
+		else 
+			is_dynamically_showcasable?
+		end
+	end
+
+	# Returns +true+ if an +Appointment+ is eligible to be displayed in the showcase (welcome page).
 	# 
 	# ==== To be eligible, the appointment has to be:
 	# 
@@ -47,7 +60,7 @@ class Appointment < ActiveRecord::Base
 	# * the appointment begin is right now
 	# * OR
 	# * the appointment begin was within 15 minutes or less from +Time.now+
-	def is_showcasable?
+	def is_dynamically_showcasable?
 		showcasable = false
 		if begin_date.today?
 			if begin_time_right_now?
