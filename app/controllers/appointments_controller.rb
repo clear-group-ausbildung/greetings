@@ -5,12 +5,15 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/list
   def list
-    @appointments = Appointment.order(begin_date: :desc, begin_time: :desc)
+    @appointments = Appointment.all
+    @appointments_list = Appointment.order(begin_date: :desc, begin_time: :desc)
   end
 
   # GET /appointments/showcase
   def showcase
     @appointments = Appointment.all
+    @appointments_showcase = @appointments.order(:begin_date, :begin_time)
+
   end
 
   # GET /appointments

@@ -16,7 +16,7 @@
       </thead>
 
       <tbody>
-        <% @appointments.each do |appointment| %>
+        <% @appointments_list.each do |appointment| %>
           <tr>
             <td><%= appointment.formatted_begin %></td>
             <td><%= appointment.external_participant_salutation %> <%= appointment.external_participant_title %> <%= appointment.external_participant_name %></td>
