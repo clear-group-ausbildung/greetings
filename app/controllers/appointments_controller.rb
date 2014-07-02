@@ -2,11 +2,12 @@ class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :showcase]
   before_filter :disable_nav, only: [:showcase]
+  before_filter :update_date_params, only: [:create]
 
   # GET /appointments/list
   def list
     @appointments = Appointment.all
-    @appointments_list = @appointments.order("begin_date DESC, begin_time DESC")
+    @appointments_list = @appointments.order(begin_date: :desc, begin_time: :desc)
   end
 
   # GET /appointments/showcase
@@ -85,5 +86,12 @@ class AppointmentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
       params.require(:appointment).permit(:begin_date, :begin_time, :end_time, :external_participant_salutation, :external_participant_title, :external_participant_name, :external_participant_company, :clear_group_employee_salutation, :clear_group_employee_name)
+    end
+
+    # Convert default values for the year month and day field of a time object on appointment creation.
+    def update_date_params
+      params[:appointment]['begin_time(1i)'] = '2001'
+      params[:appointment]['begin_time(2i)'] = '1'
+      params[:appointment]['begin_time(3i)'] = '1'
     end
 end
