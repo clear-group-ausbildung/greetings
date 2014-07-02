@@ -6,7 +6,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/list
   def list
     @appointments = Appointment.all
-    @appointments_list = Appointment.order("begin_date DESC, begin_time DESC")
+    @appointments_list = @appointments.order("begin_date DESC, begin_time DESC")
   end
 
   # GET /appointments/showcase
