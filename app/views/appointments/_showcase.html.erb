@@ -11,9 +11,9 @@
 			</div> <!-- ./col greeting_column -->
 		</div> <!-- ./row greeting_row -->	
 		<div class="row" id="refreshable">
-			<% if @appointments_showcase %>			
-				<% @appointments_showcase.each do |appointment| %>
-					<% if appointment && appointment.is_showcasable? %>
+			<% if @appointments %>			
+				<% @appointments.each do |appointment| %>
+					<% if appointment %>
 						<div class="row" id="one_appointment_row">
 							<div class="row" id="time_participant_row">
 								<div class="col-xs-2 col-md-2 col-md-offset-2" id="time_column">

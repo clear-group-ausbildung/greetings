@@ -14,6 +14,48 @@ class Appointment < ActiveRecord::Base
 	# If the appointment has already begun, then the appointment will be displayed, if the begin was 15 minutes or less from +Time.now+
 	BOUNDARIES = { begin_before: 30, begin_after: 15 }
 
+	# Returns a list of all appointments ordered descending by begin_date and begin_time.
+	def self.all_desc
+		@appointments = Appointment.all
+    @appointments_list = @appointments.order(begin_date: :desc, begin_time: :desc)
+	end
+
+	# Returns a list of appointments to be displayed in the showcase.
+	def self.all_showcase
+		# Get all appointments
+		@appointments = Appointment.all
+		# Order the liste of appointments ascending by begin_date and begin_time
+    @appointments_asc = @appointments.order(:begin_date, :begin_time)
+    # Create an array of todays appointments
+    @appointments_today = []
+    # Iterate over the ordered appointment list
+    @appointments_asc.each do |appointment|
+    	# If the appointment is today, push it to the list of todays appointments
+    	if appointment.begin_date.today?
+    		@appointments_today.push appointment
+    	end
+    end
+    # If the resulting list of todays appointments has less or equal to 5 entries return the complete list
+    if @appointments_today.size <= 5
+    	return @appointments_today
+    else
+    	# Iterate over the list of todays appointments
+    	(0...@appointments_today.size).each do |i|
+    		# As long as there are more than 5 appointments in the list
+    		until @appointments_today.size <= 5 do
+    			# Get the current appointment
+	    		appointment_today = @appointments_today[i]
+	    		# If the appointment begin_time has expired (read: 15 minutes after Time.now)
+	    		if (appointment_today.time_after_now?(appointment_today.begin_time)) && (appointment_today.difference_in_minutes(Time.now, appointment_today.begin_time) > BOUNDARIES[:begin_after])
+	    			# Remove the appointment from the list
+	    			@appointments_today.delete(appointment_today)
+	    		end
+	    	end
+    	end
+    	return @appointments_today
+    end
+	end
+
 	# Returns a formatted String representation of the begin date of the appointment.
 	def begin_date_nullsafe
 		if begin_date?
@@ -35,62 +77,6 @@ class Appointment < ActiveRecord::Base
 		if clear_group_employee_salutation.present? and clear_group_employee_name.empty?
 			errors.add(:clear_group_employee_name, I18n.t('errors.messages.blank', attribute: :clear_group_employee_name))
 		end
-	end
-
-	# Returns +true+ if an +Appointment+ is eligible to be displayed in the showcase (welcome page).
-	#
-	# If the current day has 5 or less appointmnets, the method +is_simply_showcasable+ does the check.
-	# If the current day has more than 5 appointments, the method +is_dynamically_showcasable+ does the check.
-	def is_showcasable?
-		appointments = Appointment.where(begin_date: Date.today).select("COUNT(*) AS total")
-		if appointments.first.total <= 5
-			is_simply_showcasable?
-		else 
-			is_dynamically_showcasable?
-		end
-	end
-
-	# Returns +true+ if an +Appointment+ is eligible to be displayed in the showcase (welcome page).
-	# 
-	# ==== To be eligible, the appointment has to be:
-	# 
-	# * today 
-	# * the appointment begin has to be within 30 minutes or less to +Time.now+
-	# * OR
-	# * the appointment begin is right now
-	# * OR
-	# * the appointment begin was within 15 minutes or less from +Time.now+
-	def is_dynamically_showcasable?
-		showcasable = false
-		if begin_date.today?
-			if begin_time_right_now?
-				showcasable = true
-			elsif begin_time_before_now?
-				difference = difference_in_minutes begin_time, Time.now
-				if difference <= BOUNDARIES[:begin_before]
-					showcasable = true
-				else
-					showcasable = false
-				end
-			elsif begin_time_after_now?
-				difference = difference_in_minutes Time.now, begin_time
-				if difference <= BOUNDARIES[:begin_after]
-					showcasable = true
-				else
-					showcasable = false
-				end
-			end
-		end
-		showcasable
-	end
-
-	# Returns +true+ if an +Appointment+ is eligible to be displayed in the showcase (weclome page).
-	#
-	# ==== To be eligible, the happointment has to be:
-	#
-	# * today
-	def is_simply_showcasable?
-		begin_date.today?
 	end
 
 	# Returns +true+ if an +Appointment+ has a participating +employee+.
@@ -143,22 +129,4 @@ class Appointment < ActiveRecord::Base
 			created_at: #{created_at};
 			updated_at: #{updated_at}]"
 		end
-
-		private
-
-		# Returns +true+ if the +begin_time+ of the +Appointment+ is before +Time.now+.
-		def begin_time_before_now?
-			time_before_now? begin_time
-		end
-
-		# Returns +true+ if the +begin_time+ of the +Appointment+ is equal +Time.now+.
-		def begin_time_right_now?
-			time_right_now? begin_time
-		end
-
-		# Returns +true+ if the +begin_time+ of the +Appointment+ is after +Time.now+.
-		def begin_time_after_now?
-			time_after_now? begin_time
-		end
-
 	end
