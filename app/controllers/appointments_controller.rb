@@ -31,6 +31,13 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    if params[:begin_date]
+        begin_date = DateTime.parse(params[:begin_date])
+        @appointment.begin_date = begin_date
+        if params[:begin_date].include? "T"
+          @appointment.begin_time = begin_date
+        end
+    end
   end
 
   # GET /appointments/1/edit
