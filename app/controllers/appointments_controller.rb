@@ -2,7 +2,7 @@ class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :showcase]
   before_filter :disable_nav, only: [:showcase]
-  before_filter :update_date_params, only: [:create]
+  before_filter :update_date_params, only: [:create, :update]
 
   # GET /appointments/list
   def list
@@ -90,8 +90,9 @@ class AppointmentsController < ApplicationController
 
     # Convert default values for the year month and day field of a time object on appointment creation.
     def update_date_params
-      params[:appointment]['begin_time(1i)'] = '2000'
-      params[:appointment]['begin_time(2i)'] = '1'
-      params[:appointment]['begin_time(3i)'] = '1'
+      begin_date = DateTime.strptime(params[:appointment][:begin_date], "%d.%m.%Y")
+      params[:appointment]['begin_time(1i)'] = begin_date.year.to_s
+      params[:appointment]['begin_time(2i)'] = begin_date.month.to_s
+      params[:appointment]['begin_time(3i)'] = begin_date.mday.to_s
     end
 end

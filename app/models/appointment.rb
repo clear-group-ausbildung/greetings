@@ -141,7 +141,7 @@ class Appointment < ActiveRecord::Base
 			clear_group_employee_salutation: #{clear_group_employee_salutation};
 			clear_group_employee_name: #{clear_group_employee_name};
 			created_at: #{created_at};
-			updated_at: #{updated_at}"
+			updated_at: #{updated_at}]"
 		end
 
 		private
