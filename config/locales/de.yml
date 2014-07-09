@@ -28,7 +28,8 @@ de:
       formatted_begin: "Termin Beginn"
       submit: "Speichern"
     showcase:
-      greeting_html: "Die Clear Group begr&uuml;&szlig;t heute"
+      greeting_appointments: "Die CLEAR GROUP begrüßt heute"
+      greeting_no_appointments: "Die CLEAR GROUP begrüßt Sie herzlich."
       clock: "Uhr"
     edit:
       heading: "Termin bearbeiten"
