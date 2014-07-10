@@ -15,7 +15,7 @@
         Um den CLEAR GROUP Welcome Screen zu öffnen, gibt man im Browser (am Besten Mozilla Firefox oder Google Chrome) <a href="http://192.168.15.180">"192.168.15.180"</a> ein. Es öffnet sich der Startbildschirm. Es befindet sich hier eine Menüleiste, über die man sich bei der Welcome Screen Administration anmelden kann. Desweiteren kann man über das CLEAR GROUP Logo eine Vorschau öffnen, wie die aktuelle Anzeige am Welcome Screen wäre.
       </p>
       <figure>
-        <%= image_tag("../images/Start.png") %>
+        <%= image_tag("../images/start.png") %>
         <figcaption>Der Start</figcaption>
       </figure>
     </p>
@@ -40,7 +40,7 @@
         </table>
       </p>
       <figure>
-        <%= image_tag("../images/Anmeldung.png") %>
+        <%= image_tag("../images/sign-in.png") %>
         <figcaption>Die Anmeldung</figcaption>
       </figure>
     </p>
@@ -58,7 +58,7 @@
         </ul>
       </p>
       <figure>
-        <%= image_tag("../images/Menueleiste.png") %>
+        <%= image_tag("../images/menu.png") %>
         <figcaption>Die Menüleiste</figcaption>
       </figure>
     </p>
@@ -69,14 +69,14 @@
         Über das CLEAR GROUP Logo in der Menüleiste rufen Sie die Vorschau an, d.h. Sie sehen an Ihrem Monitor die Anzeige wie sie aktuell auf dem TV im Eingangsbereich wäre. Sollte kein Termin für den heutigen Tag eingetragen sein, so wird ein allgemeine Begrüßungsmeldung angezeigt.
       </p>
       <figure>
-        <%= image_tag("../images/Vorschau_leer.png") %>
+        <%= image_tag("../images/preview-empty.png") %>
         <figcaption>Die Anzeige im Eingangsbereich, wenn für den heutigen Tag kein Termin eingetragen ist.</figcaption>
       </figure>
       <p>
         Ist für den heutigen Tag ein Termin eingetragen so wird dieser angezeigt. <i>Vorsicht, trägt man für den heutigen Tag einen Termin ein, so wird dieser direkt auf dem Monitor im Eingangsbereich sichtbar.</i>
       </p>
       <figure>
-        <%= image_tag("../images/Vorschau.png") %>
+        <%= image_tag("../images/preview.png") %>
         <figcaption>Die Anzeige im Eingangsbereich, wenn für den heutigen Tag kein Termin eingetragen ist.</figcaption>
       </figure>
       <p>
@@ -142,14 +142,14 @@
         Man kann über den Kalender einen <a href="#edit_appointment">neuen Termin anlegen</a>, indem man auf ein Feld im Kalender klickt. Das richtige Datum (Monatsanzeige) und die richtige Uhrzeit (Wochen- und Tagesanzeige) werden direkt in die entsprechenden Felder übernommen.
       </p>
       <figure>
-        <%= image_tag("../images/Kalender.png") %>
+        <%= image_tag("../images/calendar.png") %>
         <figcaption>Die Kalenderansicht mit unterschiedlichen Darstellungsmöglichkeiten</figcaption>
       </figure>
       <p>
         Sobald man sich mit der Maus über einen Termin bewegt, öffnet sich ein Tooltip mit den wichtigsten Infos zum Termin. Über einen Klick auf den Termin kommt man zur <a href="#edit_appointment">Terminbearbeitung</a>.
       </p>
       <figure>
-        <%= image_tag("../images/Tooltip.png") %>
+        <%= image_tag("../images/tooltip.png") %>
         <figcaption>Ein Tooltip mit den wichtigsten Informationen zum Termin</figcaption>
       </figure>
     </p>
@@ -160,7 +160,7 @@
         In der Terminübersicht werden alle Termine angezeigt. Dabei steht der aktuellste Termin oben, auch wenn dieser in der Zukunft liegt. Man sieht die wichtigesten Daten zu einem Termin und kann diesen auch <a href="#view_appointment">anzeigen</a>, <a href="#edit_appointment">bearbeiten</a> und löschen. Dazu ist ganz unten in der Anzeige noch die Möglichkeit einen neuen Termin anzulegen.
       </p>
       <figure>
-        <%= image_tag("../images/Termine.png") %>
+        <%= image_tag("../images/appointments.png") %>
         <figcaption>Eine Übersicht über alle Termine</figcaption>
       </figure>
     </p>
@@ -171,7 +171,7 @@
         Für Termin anlegen und bearbeiten gelten die gleichen Voraussetzungen, daher wird dies in einem Punkt beschrieben. Auf der Maske gibt es die folgenden Felder:
       </p>
       <figure>
-        <%= image_tag("../images/TermineBearbeiten.png") %>
+        <%= image_tag("../images/edit-appointment.png") %>
         <figcaption>Die Maske um einen neuen Termin anzulegen oder einen bereits bestehenden Termin abzuändern</figcaption>
       </figure>
       <table class="table">
@@ -225,7 +225,7 @@
         In das Feld "Datum" kann man händisch ein gewünschtes Datum eintragen, oder die Funktionalität des DatePickers nutzen. Dazu betätigt man den Knopf ganz rechts im Datumsfeld. Es öffnet sich ein eigener kleiner Kalender über den man nun das Datum wählen kann. Das heutige Datum wird immer orange hervorgehoben, das ausgewählte Datum blau. Man kann über die Schaltflächen oben links und rechts jeweils einen Monat vor oder zurück blättern. Über die Schaltfläche "Heute" ganz unten kann man direkt zum heutigen Tag navigieren.
       </p>
       <figure>
-        <%= image_tag("../images/Datumsauswahl.png") %>
+        <%= image_tag("../images/datepicker.png") %>
         <figcaption>Die Auswahl des Datum funktioniert komfortabel über einen kleinen Kalender.</figcaption>
       </figure>
       <p>
@@ -235,7 +235,7 @@
         Haben Sie alle Felder ausgefüllt so drücken Sie auf den Button "Speichern". Sollten nun Fehler aufgetreten sein, werden Ihnen diese oben in der Maske ausgegeben und Sie müssen Ihre Daten nochmals überarbeiten.
       </p>
       <figure>
-        <%= image_tag("../images/Fehler.png") %>
+        <%= image_tag("../images/error.png") %>
         <figcaption>Fehler beim Speichern</figcaption>
       </figure>
       <p>
@@ -249,7 +249,7 @@
         In den Termindetails finden Sie alle Informationen zu einem Termin. Auch hier finden Sie die selben Aktionen wie in der <a href="#appointments">Terminliste</a>.
       </p>
       <figure>
-        <%= image_tag("../images/Termindetails.png") %>
+        <%= image_tag("../images/view-appointment.png") %>
         <figcaption>Anzeige aller Informationen zu einem Termin</figcaption>
       </figure>
     </p>
