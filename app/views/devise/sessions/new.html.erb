@@ -1,32 +1,32 @@
 <div class="panel panel-default">
-	<div class="panel-heading">	
-		<h2><%= t('.sign_in', default: 'Sign in') %></h2>
-	</div> <!-- /.panel-heading -->
+  <div class="panel-heading"> 
+    <h2><%= t('.sign_in', default: 'Sign in') %></h2>
+  </div> <!-- /.panel-heading -->
 
-	<div class="panel-body">
-		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="panel-body">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-			<div class="form-group">		
-		  	<%= f.label :email, 'E-Mail' %>
-		  	<%= f.email_field :email, autofocus: true, class: "form-control" %>
-		  </div>
+      <div class="form-group">    
+        <%= f.label :email, 'E-Mail' %>
+        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+      </div>
 
-		  <div class="form-group">
-		  	<%= f.label :password, 'Passwort' %>
-		  	<%= f.password_field :password,  autocomplete: "off", class: "form-control" %>
-		  </div>
+      <div class="form-group">
+        <%= f.label :password, 'Passwort' %>
+        <%= f.password_field :password,  autocomplete: "off", class: "form-control" %>
+      </div>
 
-		  <% if devise_mapping.rememberable? -%>
-		    <div><%= f.check_box :remember_me %> <%= f.label :remember_me, 'Anmeldedaten speichern' %></div>
-		  <% end -%>
+      <% if devise_mapping.rememberable? -%>
+        <div><%= f.check_box :remember_me %> <%= f.label :remember_me, 'Anmeldedaten speichern' %></div>
+      <% end -%>
 
-			<div class="form-group">
-		  	<%= f.submit t('.sign_in', default: 'Sign in'), class: "btn btn-primary" %>
-			</div>
-		<% end %>
-	</div> <!-- /.panel-body -->
+      <div class="form-group">
+        <%= f.submit t('.sign_in', default: 'Sign in'), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div> <!-- /.panel-body -->
 
-	<div class="panel-footer">
-		<%= render "devise/shared/links" %>
-	</div> <!-- /.panel-footer -->
+  <div class="panel-footer">
+    <%= render "devise/shared/links" %>
+  </div> <!-- /.panel-footer -->
 </div> <!-- /.panel panel-default -->

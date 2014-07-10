@@ -1,11 +1,10 @@
 <div class="panel panel-default">
   <div class="panel-heading"> 
-		<p><%= t('.greeting', recipient: @resource.email, default: "Welcome #{@resource.email}!") %></p>
-	</div> <!-- /.panel-heading -->
+    <p><%= t('.greeting', recipient: @resource.email, default: "Welcome #{@resource.email}!") %></p>
+  </div> <!-- /.panel-heading -->
 
-	<div class="panel-body">
-		<p><%= t('.instruction', default: 'You can confirm your account email through the link below:') %></p>
-		<p><%= link_to t('.action', default: 'Confirm my account'), confirmation_url(@resource, confirmation_token: @resource.confirmation_token) %></p>
+  <div class="panel-body">
+    <p><%= t('.instruction', default: 'You can confirm your account email through the link below:') %></p>
+    <p><%= link_to t('.action', default: 'Confirm my account'), confirmation_url(@resource, confirmation_token: @resource.confirmation_token) %></p>
   </div> <!-- /.panel-body -->
 </div> <!-- /.panel panel-default -->
-	
