@@ -1,56 +1,51 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg: white;
-$font-family-sans-serif:	'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-height: 45px;
-$navbar-default-bg: #f6f6f6;
-$navbar-default-brand-color: #f26522;;
-$brand-primary: #f26522;
-$jumbotron-bg: #f6f6f6;
-$jumbotron-half-transparent-bg-color-rgba: rgba(246, 246, 246, 0.5);
+$body-bg                                  : white;
+$font-family-sans-serif                   : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height                            : 45px;
+$navbar-default-bg                        : #f6f6f6;
+$navbar-default-brand-color               : #f26522;;
+$brand-primary                            : #f26522;
+$jumbotron-bg                             : #f6f6f6;
+$jumbotron-half-transparent-bg-color-rgba : rgba(246, 246, 246, 0.5);
 @import 'bootstrap';
 
 .center {
-	text-align: center;
+  text-align : center;
 }
 
 .navbar-brand {
-	font-weight: bold;
+  font-weight : bold;
 }
 
 body {
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+  background-size       : cover;
+  background-position   : center;
+  background-attachment : fixed;
 }
 
 .jumbotron {
-	background: $jumbotron-half-transparent-bg-color-rgba;
-	padding: 0px;
+  background : $jumbotron-half-transparent-bg-color-rgba;
+  padding    : 0px;
 }
 
 .navbar-brand-image {
-	max-width:250px; 
-	margin-top: -12px;
+  max-width  :250px; 
+  margin-top : -12px;
 }
 
 h1.scaled {
-	font-size: 347%;
+  font-size : 347%;
 }
 
 h2.scaled {
-	font-size: 200%;
+  font-size : 200%;
 }
 
 h3.scaled {
-	margin-top: 0px;
+  margin-top : 0px;
 }
 
 .img-scaled {
-	max-width: 250px;
-}
-
-.img-scaled-showcase2 {
-	margin-top: 12px;
-	max-width: 280px;
+  max-width : 250px;
 }
