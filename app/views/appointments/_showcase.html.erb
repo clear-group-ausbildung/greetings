@@ -5,18 +5,18 @@
 </div> <!-- ./row logo-->
 <div class="row" id="jumbotron_row">
 	<div class="jumbotron">
-		<div class="row" id="greeting_row">
-			<div class="col-xs-12 col-md-12 col-md-offset-1" id="greeting_column">
-					<h1 class="scaled">
-						<% if @appointments.any? %>
-							<%= t('.greeting_appointments') %>:
-						<% else %>
-							<%= t('.greeting_no_appointments') %>
-						<% end %>
-					</h1>
-			</div> <!-- ./col greeting_column -->
-		</div> <!-- ./row greeting_row -->	
 		<div class="row" id="refreshable">
+			<div class="row" id="greeting_row">
+				<div class="col-xs-12 col-md-12 col-md-offset-1" id="greeting_column">
+						<h1 class="scaled">
+							<% if @appointments.any? %>
+								<%= t('.greeting_appointments') %>:
+							<% else %>
+								<%= t('.greeting_no_appointments') %>
+							<% end %>
+						</h1>
+				</div> <!-- ./col greeting_column -->
+			</div> <!-- ./row greeting_row -->	
 			<% if @appointments %>			
 				<% @appointments.each do |appointment| %>
 					<% if appointment %>

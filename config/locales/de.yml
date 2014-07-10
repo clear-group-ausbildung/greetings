@@ -67,7 +67,7 @@ de:
       calendar: "Kalender"
       appointments: "Termine"
       new_appointment: "Neuer Termin"
-      account_settings: "Account Einstellungen"
+      help: "Hilfe"
       sign_out: "Abmelden"
     application:
       title: "Clear Group - Welcome"

@@ -14,6 +14,10 @@ class AppointmentsController < ApplicationController
     @appointments = Appointment.all_showcase
   end
 
+  # GET /appointments/help
+  def help
+  end
+
   # GET /appointments
   # GET /appointments.json
   def index

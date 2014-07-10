@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+figure {
+  padding: 5px;
+  float: left;
+  border: 2px solid #F26522;
+  border-radius: 5px;
+}
+
+figure img {
+  border-radius: 3px 3px 0 0;
+  width: 100%;
+}
+
+figure figcaption {
+  padding: 2px 4px 2px 4px;
+  background-color: #F26522;
+  color: #FFFFFF;
+  font-style: italic;
+  border-radius: 0 0 3px 3px;
+}
+
+div.left {
+float:left;
+width:80%;
+}
+
+div.menu {
+position:fixed;
+margin:0 80%;
+}
