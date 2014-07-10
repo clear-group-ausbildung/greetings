@@ -2,66 +2,77 @@
 <p>
   Über das CLEAR GROUP Logo in der Menüleiste rufen Sie die Vorschau an, d.h. Sie sehen an Ihrem Monitor die Anzeige wie sie aktuell auf dem TV im Eingangsbereich wäre. Sollte kein Termin für den heutigen Tag eingetragen sein, so wird ein allgemeine Begrüßungsmeldung angezeigt.
 </p>
+</br>
 <figure>
-  <%= image_tag("../images/preview-empty.png") %>
+  <%= image_tag("../images/preview-empty.png", class: "img-responsive") %>
   <figcaption>Die Anzeige im Eingangsbereich, wenn für den heutigen Tag kein Termin eingetragen ist.</figcaption>
 </figure>
+</br>
 <p>
   Ist für den heutigen Tag ein Termin eingetragen so wird dieser angezeigt. <i>Vorsicht, trägt man für den heutigen Tag einen Termin ein, so wird dieser direkt auf dem Monitor im Eingangsbereich sichtbar.</i>
 </p>
+</br>
 <figure>
-  <%= image_tag("../images/preview.png") %>
+  <%= image_tag("../images/preview.png", class: "img-responsive") %>
   <figcaption>Die Anzeige im Eingangsbereich, wenn für den heutigen Tag kein Termin eingetragen ist.</figcaption>
 </figure>
+</br>
 <p>
   Sollten an einem Tag mehr als fünf Termine eingetragen sein, so schaltet sich für die Anzeige eine spezielle Logik ein. Es werden immer fünf Termine angezeigt, Termine die schon vergangen sind werden 15 Minuten nach deren Starzeit ausgebelendet. Das passiert so lange, bis nur noch fünf Termine die in der Zukunft sind für den Tag eingetragen sind.
 </p>
 <p>
   Zur Verdeutlichung dieser Funktionaltität nutzen wir ein Beispiel. Für den heutigen Tag sind acht Termine eingetragen:
   <table class="table">
-    <tr>
-      <th>Uhrzeit</th>
-      <th>Name</th>
-    </tr>
-    <tr>
-      <td>8:00 Uhr</td>
-      <td>Termin1</td>
-    </tr>
-    <tr>
-      <td>9:00 Uhr</td>
-      <td>Termin2</td>
-    </tr>
-    <tr>
-      <td>11:00 Uhr</td>
-      <td>Termin3</td>
-    </tr>
-    <tr>
-      <td>12:00 Uhr</td>
-      <td>Termin4</td>
-    </tr>
-    <tr>
-      <td>13:00 Uhr</td>
-      <td>Termin5</td>
-    </tr>
-    <tr>
-      <td>15:00 Uhr</td>
-      <td>Termin6</td>
-    </tr>
-    <tr>
-      <td>17:00 Uhr</td>
-      <td>Termin7</td>
-    </tr>
-    <tr>
-      <td>18:00 Uhr</td>
-      <td>Termin8</td>
-    </tr>
-  </table></br>
-  Die Anzeige funktioniert wie folgt:
-  <ul>
-    <li>Um 7:30 Uhr werden auf dem Monitor die Termine 1 bis 5 angezeigt</li>
-    <li>Ab 8:15 Uhr werden dann die Termine 2 bis 6 angezeigt</li>
-    <li>und so weiter...</li>
-    <li>Ab 11:15 Uhr werden dann die Termine 4 bis 8 angezeigt</li>
-  </ul>
-  Da an dem heutigen Tag keine weiteren Termine mehr eingetragen sind bleibt das der Zustand, egal wie spät es wird. Termine 4 bis 8 bleiben angezeigt, bis der Tag auf morgen wechselt.
+    <thead>
+      <tr>
+        <th>Uhrzeit</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>8:00 Uhr</td>
+        <td>Termin1</td>
+      </tr>
+      <tr>
+        <td>9:00 Uhr</td>
+        <td>Termin2</td>
+      </tr>
+      <tr>
+        <td>11:00 Uhr</td>
+        <td>Termin3</td>
+      </tr>
+      <tr>
+        <td>12:00 Uhr</td>
+        <td>Termin4</td>
+      </tr>
+      <tr>
+        <td>13:00 Uhr</td>
+        <td>Termin5</td>
+      </tr>
+      <tr>
+        <td>15:00 Uhr</td>
+        <td>Termin6</td>
+      </tr>
+      <tr>
+        <td>17:00 Uhr</td>
+        <td>Termin7</td>
+      </tr>
+      <tr>
+        <td>18:00 Uhr</td>
+        <td>Termin8</td>
+      </tr>
+    </tbody>
+  </table>
+  </br>
+  <p>
+    Die Anzeige funktioniert wie folgt:
+    <ul>
+      <li>Um 7:30 Uhr werden auf dem Monitor die Termine 1 bis 5 angezeigt</li>
+      <li>Ab 8:15 Uhr werden dann die Termine 2 bis 6 angezeigt</li>
+      <li>und so weiter...</li>
+      <li>Ab 11:15 Uhr werden dann die Termine 4 bis 8 angezeigt</li>
+    </ul>
+    Da an dem heutigen Tag keine weiteren Termine mehr eingetragen sind bleibt das der Zustand, egal wie spät es wird. Termine 4 bis 8 bleiben angezeigt, bis der Tag auf morgen wechselt.
+  </p>
 </p>

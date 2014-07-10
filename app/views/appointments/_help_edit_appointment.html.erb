@@ -2,74 +2,84 @@
 <p>
   Für Termin anlegen und bearbeiten gelten die gleichen Voraussetzungen, daher wird dies in einem Punkt beschrieben. Auf der Maske gibt es die folgenden Felder:
 </p>
+</br>
 <figure>
-  <%= image_tag("../images/edit-appointment.png") %>
+  <%= image_tag("../images/edit-appointment.png", class: "img-responsive") %>
   <figcaption>Die Maske um einen neuen Termin anzulegen oder einen bereits bestehenden Termin abzuändern</figcaption>
 </figure>
+</br>
 <table class="table">
-  <tr>
-    <th>Feld</th>
-    <th>Beschreibung</th>
-    <th>Plausi</th>
-  </tr>
-  <tr>
-    <td>Datum</td>
-    <td>Ein DatePicker-Feld mit dem das Datum für den Termin ausgewählt werden kann.</td>
-    <td>Pflichtfeld</td>
-  </tr>
-  <tr>
-    <td>Uhrzeit</td>
-    <td>Das Feld Uhrzeit besteht aus zwei Auswahlfeldern, eines für die Stunden (00 bis 23) und eines für die Minuten (00, 15, 30 und 45)</td>
-    <td>Pflichtfeld</td>
-  </tr>
-  <tr>
-    <td>Teilnehmer Anrede</td>
-    <td>Ein Auswahlfeld mit Herr und Frau</td>
-    <td>Pflichtfeld</td>
-  </tr>
-  <tr>
-    <td>Teilnehmer Titel</td>
-    <td>In dieses Feld kann der Titel des Teilnehmers eingetragen werden, z.B. Dr. Prof.</td>
-    <td>Darf nicht länger als 10 Zeichen sein</td>
-  </tr>
-  <tr>
-    <td>Teilnehmer Name</td>
-    <td>Der Nachname des Teilnehmers</td>
-    <td>Pflichtfeld und darf nicht länger als 50 Zeichen sein</td>
-  </tr>
-  <tr>
-    <td>Teilnehmer Firma</td>
-    <td>Die Firma des Teilnehmers</td>
-    <td>Darf nicht länger als 50 Zeichen sein</td>
-  </tr>
-  <tr>
-    <td>Clear Group Mitarbieter Anrede</td>
-    <td>Ein Auswahlfeld mit Herr und Frau</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Clear Group Mitarbieter Name</td>
-    <td>Der Nachname des Clear Group Mitarbeiters</td>
-    <td>Darf nicht länger als 50 Zeichen sein</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Feld</th>
+      <th>Beschreibung</th>
+      <th>Plausi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Datum</td>
+      <td>Ein DatePicker-Feld mit dem das Datum für den Termin ausgewählt werden kann.</td>
+      <td>Pflichtfeld</td>
+    </tr>
+    <tr>
+      <td>Uhrzeit</td>
+      <td>Das Feld Uhrzeit besteht aus zwei Auswahlfeldern, eines für die Stunden (00 bis 23) und eines für die Minuten (00, 15, 30 und 45)</td>
+      <td>Pflichtfeld</td>
+    </tr>
+    <tr>
+      <td>Teilnehmer Anrede</td>
+      <td>Ein Auswahlfeld mit Herr und Frau</td>
+      <td>Pflichtfeld</td>
+    </tr>
+    <tr>
+      <td>Teilnehmer Titel</td>
+      <td>In dieses Feld kann der Titel des Teilnehmers eingetragen werden, z.B. Dr. Prof.</td>
+      <td>Darf nicht länger als 10 Zeichen sein</td>
+    </tr>
+    <tr>
+      <td>Teilnehmer Name</td>
+      <td>Der Nachname des Teilnehmers</td>
+      <td>Pflichtfeld und darf nicht länger als 50 Zeichen sein</td>
+    </tr>
+    <tr>
+      <td>Teilnehmer Firma</td>
+      <td>Die Firma des Teilnehmers</td>
+      <td>Darf nicht länger als 50 Zeichen sein</td>
+    </tr>
+    <tr>
+      <td>Clear Group Mitarbieter Anrede</td>
+      <td>Ein Auswahlfeld mit Herr und Frau</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Clear Group Mitarbieter Name</td>
+      <td>Der Nachname des Clear Group Mitarbeiters</td>
+      <td>Darf nicht länger als 50 Zeichen sein</td>
+    </tr>
+  </tbody>
 </table>
 <p>
   In das Feld "Datum" kann man händisch ein gewünschtes Datum eintragen, oder die Funktionalität des DatePickers nutzen. Dazu betätigt man den Knopf ganz rechts im Datumsfeld. Es öffnet sich ein eigener kleiner Kalender über den man nun das Datum wählen kann. Das heutige Datum wird immer orange hervorgehoben, das ausgewählte Datum blau. Man kann über die Schaltflächen oben links und rechts jeweils einen Monat vor oder zurück blättern. Über die Schaltfläche "Heute" ganz unten kann man direkt zum heutigen Tag navigieren.
 </p>
+</br>
 <figure>
-  <%= image_tag("../images/datepicker.png") %>
+  <%= image_tag("../images/datepicker.png", class: "img-responsive") %>
   <figcaption>Die Auswahl des Datum funktioniert komfortabel über einen kleinen Kalender.</figcaption>
 </figure>
+</br>
 <p>
   Wie sie der oberen Tabelle entnehmen können gibt es für einige Felder Voraussetzungen die zum erfolgreichen speichern erfüllt werden müssen. Die Aussage Pflichfeld bedeutet, dass das Feld immer ausgefüllt werden muss. Eine Sonderheit gibt es zu den Prüfungen in der Tabelle. Die Felder "Clear Group Mitarbieter Anrede" und "Clear Group Mitarbieter Name" sind voneinander abhängig. Man muss in diese Felder nichts eintragen, aber sobald eines der beiden Felder gefüllt ist, muss das andere auch gefüllt werden.
 </p>
 <p>
   Haben Sie alle Felder ausgefüllt so drücken Sie auf den Button "Speichern". Sollten nun Fehler aufgetreten sein, werden Ihnen diese oben in der Maske ausgegeben und Sie müssen Ihre Daten nochmals überarbeiten.
 </p>
+</br>
 <figure>
-  <%= image_tag("../images/error.png") %>
+  <%= image_tag("../images/error.png", class: "img-responsive") %>
   <figcaption>Fehler beim Speichern</figcaption>
 </figure>
+</br>
 <p>
   Konnten Sie Ihren Termin korrekt speichern, so werden Ihnen die <a href="#view_appointment">Termindetails</a> angezeigt.
 </p>
