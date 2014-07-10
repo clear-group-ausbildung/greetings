@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 figure {
   padding: 5px;
   float: left;
@@ -18,14 +16,4 @@ figure figcaption {
   color: #FFFFFF;
   font-style: italic;
   border-radius: 0 0 3px 3px;
-}
-
-div.left {
-float:left;
-width:80%;
-}
-
-div.menu {
-position:fixed;
-margin:0 75%;
 }
