@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-4 col-md-4">    
+    <div class="col-xs-4 col-md-4">
       <div class="input-group date">
         <%= f.text_field :begin_date, value: @appointment.begin_date_nullsafe, class: "form-control" %>
         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
@@ -27,12 +27,12 @@
 </div>
 <div class="form-group">
   <div class="row">
-    <div class="col-xs-4 col-md-4">    
+    <div class="col-xs-4 col-md-4">
       <%= f.label :begin_time, t('.begin_time') %>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-4 col-md-4">    
+    <div class="col-xs-4 col-md-4">
       <%= f.time_select :begin_time, { minute_step: 15 }, { 'data-width' => "47.93%", class: "selectpicker" } %>
     </div>
 
@@ -40,12 +40,12 @@
 </div>
 <div class="form-group">
   <div class="row">
-    <div class="col-xs-4 col-md-4">       
+    <div class="col-xs-4 col-md-4">
       <%= f.label :external_participant_salutation, t('.external_participant_salutation') %>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-4 col-md-4">       
+    <div class="col-xs-4 col-md-4">
       <%= f.select( :external_participant_salutation, @appointment.options_for_salutation, { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
     </div>
   </div>
@@ -64,12 +64,12 @@
 </div>
 <div class="form-group">
   <div class="row">
-    <div class="col-xs-4 col-md-4">    
+    <div class="col-xs-4 col-md-4">
       <%= f.label :clear_group_employee_salutation, t('.clear_group_employee_salutation') %>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-4 col-md-4">       
+    <div class="col-xs-4 col-md-4">
       <%= f.select( :clear_group_employee_salutation, @appointment.options_for_salutation, { }, { 'data-width' => "100%", :class => "selectpicker"} ) %>
     </div>
   </div>

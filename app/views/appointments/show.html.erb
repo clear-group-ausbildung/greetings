@@ -1,15 +1,15 @@
 <div class="panel panel-default">
-	<div class="panel-heading"> 
-  	<h2><%= t('.heading') %></h2>
-	</div> <!-- /.panel-heading -->
+  <div class="panel-heading"> 
+    <h2><%= t('.heading') %></h2>
+  </div> <!-- /.panel-heading -->
 
-	<div class="panel-body">
-  	<div class="row">
-    	<div class="col-xs-6 col-md-3">
-      	<strong><%= t('.appointment_begin') %>:</strong>
-			</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <strong><%= t('.appointment_begin') %>:</strong>
+      </div>
       <div class="col-xs-6 col-md-9">
-      	<%= @appointment.formatted_begin %>
+        <%= @appointment.formatted_begin %>
       </div>
     </div>
  
@@ -17,7 +17,7 @@
       <div class="col-xs-6 col-md-3">
         <strong><%= t('.external_participant') %>:</strong>
       </div>
-      <div class="col-xs-6 col-md-9">                
+      <div class="col-xs-6 col-md-9">
         <%= @appointment.external_participant_salutation %> <%= @appointment.external_participant_title %> <%= @appointment.external_participant_name %><% if @appointment.external_participant_company? %>, <%= @appointment.external_participant_company %><% end %>
       </div>
     </div>
@@ -26,7 +26,7 @@
       <div class="col-xs-6 col-md-3">
         <strong><%= t('.clear_group_employee') %>:</strong>
       </div>
-      <div class="col-xs-6 col-md-9">              
+      <div class="col-xs-6 col-md-9">
         <%= @appointment.clear_group_employee_salutation %> <%= @appointment.clear_group_employee_name %>
       </div>
     </div>
