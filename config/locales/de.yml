@@ -70,6 +70,15 @@ de:
       appointments: "Termine"
       edit_appointment: "Termin anlegen / bearbeiten"
       view_appointment: "Termindetails"
+    help_nav:
+      start: "Start"
+      sign_in: "Anmeldung"
+      menu: "Menüleiste"
+      preview: "Vorschau"
+      calendar: "Kalenderansicht"
+      appointments: "Termine"
+      edit_appointment: "Termin anlegen / bearbeiten"
+      view_appointment: "Termindetails"
   layouts:
     header:
       sign_up: "Registrieren"

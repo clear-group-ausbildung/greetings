@@ -1,6 +1,5 @@
 figure {
   padding       : 5px;
-  float         : left;
   border        : 2px solid #F26522;
   border-radius : 5px;
 }
@@ -16,4 +15,8 @@ figure figcaption {
   color            : #FFFFFF;
   font-style       : italic;
   border-radius    : 0 0 3px 3px;
+}
+
+hr.padded {
+  padding-bottom : 20px;
 }
