@@ -98,9 +98,11 @@ class AppointmentsController < ApplicationController
 
     # Convert default values for the year month and day field of a time object on appointment creation.
     def update_date_params
-      begin_date = DateTime.strptime(params[:appointment][:begin_date], "%d.%m.%Y")
-      params[:appointment]['begin_time(1i)'] = begin_date.year.to_s
-      params[:appointment]['begin_time(2i)'] = begin_date.month.to_s
-      params[:appointment]['begin_time(3i)'] = begin_date.mday.to_s
+      if params[:appointment][:begin_time]
+        begin_date = DateTime.strptime(params[:appointment][:begin_date], "%d.%m.%Y")
+        params[:appointment]['begin_time(1i)'] = begin_date.year.to_s
+        params[:appointment]['begin_time(2i)'] = begin_date.month.to_s
+        params[:appointment]['begin_time(3i)'] = begin_date.mday.to_s
+      end
     end
 end
