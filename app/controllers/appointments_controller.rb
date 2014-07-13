@@ -80,7 +80,7 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment.destroy
     respond_to do |format|
-      format.html { redirect_to appointments_url, notice: 'Termin wurde erfolgreich gelöscht.' }
+      format.html { redirect_to appointments_list_url, notice: 'Termin wurde erfolgreich gelöscht.' }
       format.json { head :no_content }
     end
   end
