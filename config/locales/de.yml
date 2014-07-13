@@ -62,17 +62,8 @@ de:
       back: "Zurück"
     help:
       heading: "Hilfe"
-      start: "Start"
-      sign_in: "Anmeldung"
-      menu: "Menüleiste"
-      preview: "Vorschau"
-      calendar: "Kalenderansicht"
-      appointments: "Termine"
-      edit_appointment: "Termin anlegen / bearbeiten"
-      view_appointment: "Termindetails"
     help_nav:
-      start: "Start"
-      sign_in: "Anmeldung"
+      start_sign_in: "Start & Anmeldung"
       menu: "Menüleiste"
       preview: "Vorschau"
       calendar: "Kalenderansicht"
