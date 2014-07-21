@@ -84,6 +84,15 @@ class Appointment < ActiveRecord::Base
     clear_group_employee_salutation? and clear_group_employee_name?
   end
 
+  # Returns a more readable salutation for the clear group employee
+  def clear_group_employee_vocalized_salutation
+    if clear_group_employee_salutation == "Herr"
+      "Herrn"
+    else
+      clear_group_employee_salutation
+    end
+  end
+
   # Returns an +array+ of options for valid salutations.
   def options_for_salutation
     [
