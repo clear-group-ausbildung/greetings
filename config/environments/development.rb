@@ -39,6 +39,5 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Configure Loggin
-  #config.logger = ActiveSupport::Logger.new('log/cg-welcome-screen.log')
-  config.logger = Logger.new(Rails.root.join("log",Rails.env + ".log"),3,5*1024*1024)
+  config.logger = ActiveSupport::Logger.new(Rails.root.join("log",Rails.env + ".log"),3,5*1024*1024)
 end

@@ -30,7 +30,9 @@
       </tbody>
     </table>
   </div> <!-- /.panel-body -->
-
+  <div class="center">
+     <%= will_paginate @appointments, renderer: BootstrapPagination::Rails %>
+  </div>
   <div class="panel-footer">
     <%= link_to t('.new_appointment'), new_appointment_path %>
   </div> <!-- /.panel-footer -->

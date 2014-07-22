@@ -6,7 +6,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/list
   def list
-    @appointments = Appointment.all_desc
+    @appointments = Appointment.all_desc.paginate(:page => params[:page], :per_page => 15)
   end
 
   # GET /appointments/showcase

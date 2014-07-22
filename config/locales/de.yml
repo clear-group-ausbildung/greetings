@@ -81,3 +81,6 @@ de:
       sign_out: "Abmelden"
     application:
       title: "Clear Group - Welcome"
+  will_paginate:
+    previous_label: "Vorherige"    
+    next_label: "Nächste"
