@@ -30,7 +30,7 @@ body {
 }
 
 .navbar-brand-image {
-  max-width  :250px; 
+  max-width  : 250px; 
   margin-top : -12px;
 }
 
@@ -48,4 +48,22 @@ h3.scaled {
 
 .img-scaled {
   max-width : 250px;
+}
+
+.all-center {
+  margin   : auto;
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  bottom   : 0;
+  right    : 0;
+}
+
+.all-center.is-Image {
+  height: auto;
+}
+
+.all-center.is-Image img {
+  width  : 100%;
+  height : auto;
 }

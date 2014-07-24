@@ -11,6 +11,7 @@ runSlide = ->
       return
     return
   return
+count = 0
 getPic = ->
   aPicture = ""
   picsLength = thePictures.length
@@ -31,6 +32,9 @@ constWsDelay = 5000
 constPicDelay = 5000
 thePictures = []
 thePictures.push "<%= asset_path('cg-logo.png') %>"
+thePictures.push "<%= asset_path('basketball.jpg') %>"
+thePictures.push "<%= asset_path('activeday.jpg') %>"
+
 $(document).ready ->
   runSlide()  if thePictures.length > 0
   return
@@ -44,4 +48,3 @@ $.fn.delay = (time) ->
     ), time
     return
 
-count = 0
