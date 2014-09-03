@@ -2,6 +2,7 @@ de:
   activerecord:
     models:
       appointment: "Termin"
+      slide: "Folie"
     attributes:
       appointment:
         begin_date: "Datum"
@@ -84,3 +85,7 @@ de:
   will_paginate:
     previous_label: "Vorherige"    
     next_label: "Nächste"
+  slides:
+    form:
+      image: "Bild"
+      submit: "Speichern"

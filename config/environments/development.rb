@@ -40,4 +40,11 @@ Rails.application.configure do
 
   # Configure Loggin
   config.logger = ActiveSupport::Logger.new(Rails.root.join("log",Rails.env + ".log"),3,5*1024*1024)
+
+  if RUBY_PLATFORM =~ /mswin/
+    Paperclip.options[:command_path] = 'C:\Program Files\ImageMagick-6.8.9-Q16'
+  else
+    Paperclip.options[:command_path] = '/usr/local/bin/'
+  end
+  
 end

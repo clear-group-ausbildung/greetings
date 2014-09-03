@@ -1,0 +1,23 @@
+<%= form_for(@slide) do |f| %>
+<% if @slide.errors.any? %>
+<div id="error_explanation">
+  <h2><%= t('errors.template.header', model: t('activerecord.models.slide'), count: @slide.errors.count) %></h2>
+  <ul>
+    <% @slide.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="form-group">
+  <div class="row">
+    <%= f.label :image, t('.image') %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.submit t('.submit'), class: "btn btn-primary" %>
+</div>
+<% end %>

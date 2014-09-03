@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :slides
+
   get 'appointments/list'
   get 'appointments/showcase'
   get 'appointments/help'
