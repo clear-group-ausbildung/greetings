@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Showcasable:</strong>
+  <strong>Bild in Präsentation anzeigen:</strong>
   <%= @slide.showcasable %>
 </p>
 
 <p>
-  <%= image_tag @slide.image.url %>
+  <%= image_tag(@slide.image.url, class: "img-responsive") %>
 </p>
 
 <%= link_to 'Edit', edit_slide_path(@slide) %> |
