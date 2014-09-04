@@ -18,7 +18,7 @@ class SlidesControllerTest < ActionController::TestCase
 
   test "should create slide" do
     assert_difference('Slide.count') do
-      post :create, slide: {  }
+      post :create, slide: { showcasable: @slide.showcasable }
     end
 
     assert_redirected_to slide_path(assigns(:slide))
@@ -35,7 +35,7 @@ class SlidesControllerTest < ActionController::TestCase
   end
 
   test "should update slide" do
-    patch :update, id: @slide, slide: {  }
+    patch :update, id: @slide, slide: { showcasable: @slide.showcasable }
     assert_redirected_to slide_path(assigns(:slide))
   end
 

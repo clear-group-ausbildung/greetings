@@ -87,5 +87,6 @@ de:
     next_label: "Nächste"
   slides:
     form:
+      showcasable: "Anzeigen"
       image: "Bild"
       submit: "Speichern"

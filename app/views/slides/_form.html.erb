@@ -12,6 +12,13 @@
 
 <div class="form-group">
   <div class="row">
+    <%= f.label :showcasable, t('.showcasable') %><br>
+    <%= f.check_box :showcasable %>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="row">
     <%= f.label :image, t('.image') %>
     <%= f.file_field :image, class: "form-control" %>
   </div>

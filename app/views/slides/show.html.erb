@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @slide.image.url %>
+<p>
+  <strong>Showcasable:</strong>
+  <%= @slide.showcasable %>
+</p>
+
+<p>
+  <%= image_tag @slide.image.url %>
+</p>
 
 <%= link_to 'Edit', edit_slide_path(@slide) %> |
 <%= link_to 'Back', slides_path %>

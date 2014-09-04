@@ -1,1 +1,1 @@
-json.extract! @slide, :id, :created_at, :updated_at
+json.extract! @slide, :id, :showcasable, :created_at, :updated_at
