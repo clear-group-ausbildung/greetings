@@ -1,6 +1,14 @@
-<h1>Editing slide</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2><%= t('.heading') %></h2>
+  </div> <!-- /.panel-heading -->
 
-<%= render 'form' %>
+  <div class="panel-body">
+    <%= render 'form' %>
+  </div> <!-- /.panel-body -->
 
-<%= link_to 'Show', @slide %> |
-<%= link_to 'Back', slides_path %>
+  <div class="panel-footer">
+    <%= link_to t('.show'), @slide %> |
+    <%= link_to t('.back'), :back %>
+  </div> <!-- /.panel-footer -->
+</div> <!-- /.panel panel-default -->

@@ -2,7 +2,7 @@ de:
   activerecord:
     models:
       appointment: "Termin"
-      slide: "Folie"
+      slide: "Bild"
     attributes:
       appointment:
         begin_date: "Datum"
@@ -78,15 +78,37 @@ de:
       calendar: "Kalender"
       appointments: "Termine"
       new_appointment: "Neuer Termin"
+      slides: "Bilder"
+      new_slide: "Neues Bild"
       help: "Hilfe"
       sign_out: "Abmelden"
     application:
       title: "Clear Group - Welcome"
   will_paginate:
-    previous_label: "Vorherige"    
+    previous_label: "Vorherige"
     next_label: "Nächste"
   slides:
     form:
-      showcasable: "Anzeigen"
+      showcasable: "Bild in Präsentation anzeigen"
       image: "Bild"
-      submit: "Speichern"
+      submit: "Bild hochladen"
+    new:
+      heading: "Neues Bild hochladen"
+      back: "Zurück"
+    show:
+      heading: "Bild anzeigen"
+      showcasable: "Bild in Präsentation anzeigen"
+      image: "Bild"
+      edit: "Bearbeiten"
+      back: "Zurück"
+    edit:
+      heading: "Bild bearbeiten"
+      show: "Anzeigen"
+      back: "Zurück"
+    index:
+      heading: "Bilderübersicht"
+      showcasable: "Bild in Präsentation anzeigen"
+      edit: "Bearbeiten"
+      destroy: "Löschen"
+      confirm: "Wollen Sie das Bild wirklich löschen?"
+      new_slide: "Neues Bild"

@@ -1,13 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading"> 
+    <h2><%= t('.heading') %></h2>
+  </div> <!-- /.panel-heading -->
 
-<p>
-  <strong>Bild in Präsentation anzeigen:</strong>
-  <%= @slide.showcasable %>
-</p>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <strong><%= t('.showcasable') %>:</strong>
+      </div>
+      <div class="col-xs-6 col-md-9">
+        <%= @slide.showcasable %>
+      </div>
+    </div>
 
-<p>
-  <%= image_tag(@slide.image.url, class: "img-responsive") %>
-</p>
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <strong><%= t('.image') %>:</strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <%= image_tag(@slide.image.url, class: "img-responsive") %>
+      </div>
+    </div>
+   </div> <!-- /.panel-body -->
 
-<%= link_to 'Edit', edit_slide_path(@slide) %> |
-<%= link_to 'Back', slides_path %>
+   <div class="panel-footer">
+    <%= link_to t('.edit'), edit_slide_path(@slide) %> |
+    <%= link_to t('.back'), :back %>
+   </div> <!-- /.panel-footer -->
+ </div> <!-- /.panel panel-default -->

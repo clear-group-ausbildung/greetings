@@ -1,13 +1,13 @@
 <div class="panel panel-default">
-  <div class="panel-heading"> 
+  <div class="panel-heading">
     <h2><%= t('.heading') %></h2>
   </div> <!-- /.panel-heading -->
 
-  <div class="panel-body">  
+  <div class="panel-body">
     <%= render 'form' %>
   </div> <!-- /.panel-body -->
 
-  <div class="panel-footer"> 
+  <div class="panel-footer">
     <%= link_to t('.show'), @appointment %> |
     <%= link_to t('.destroy'), @appointment, method: :delete, data: { confirm: t('.confirm') } %> |
     <%= link_to t('.back'), :back %>

@@ -18,6 +18,7 @@
 //= require bootstrap-select
 //= require jquery.turbolinks
 //= require turbolinks
+//= require masonry/jquery.masonry
 //= require moment
 //= require fullcalendar
 //= require lang-all

@@ -74,6 +74,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    masonry-rails (0.2.1)
+      rails
     mime-types (1.25.1)
     minitest (5.3.4)
     momentjs-rails (2.6.0)
@@ -170,6 +172,7 @@ DEPENDENCIES
   jquery-qtip2-wrapper-rails (~> 2.2.0)
   jquery-rails
   jquery-turbolinks
+  masonry-rails (~> 0.2.1)
   momentjs-rails (~> 2.6.0)
   paperclip (~> 4.2.0)
   rails (= 4.1.1)

@@ -12,7 +12,7 @@
         <%= @appointment.formatted_begin %>
       </div>
     </div>
- 
+
     <div class="row">
       <div class="col-xs-6 col-md-3">
         <strong><%= t('.external_participant') %>:</strong>
@@ -21,7 +21,7 @@
         <%= @appointment.external_participant_salutation %> <%= @appointment.external_participant_title %> <%= @appointment.external_participant_name %><% if @appointment.external_participant_company? %>, <%= @appointment.external_participant_company %><% end %>
       </div>
     </div>
- 
+
     <div class="row">
       <div class="col-xs-6 col-md-3">
         <strong><%= t('.clear_group_employee') %>:</strong>
@@ -31,7 +31,7 @@
       </div>
     </div>
    </div> <!-- /.panel-body -->
- 
+
    <div class="panel-footer">
      <%= link_to t('.edit'), edit_appointment_path(@appointment) %> |
      <%= link_to t('.destroy'), @appointment, method: :delete, data: { confirm: t('.confirm') } %> |

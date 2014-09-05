@@ -4,7 +4,7 @@ class SlidesController < ApplicationController
   # GET /slides
   # GET /slides.json
   def index
-    @slides = Slide.all
+    @slides = Slide.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
   end
 
   # GET /slides/1
