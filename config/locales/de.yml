@@ -91,7 +91,7 @@ de:
     form:
       showcasable: "Bild in Präsentation anzeigen"
       image: "Bild"
-      submit: "Bild hochladen"
+      submit: "Speichern"
     new:
       heading: "Neues Bild hochladen"
       back: "Zurück"
