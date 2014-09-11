@@ -8,7 +8,13 @@
     <div id="slides" class="transitions-enabled">
       <% @slides.each do |slide| %>
         <div class="box panel panel-default">
+          <% if !slide.showcasable? %>
+            <div class="hero-unit">
+          <% end %>
           <%= link_to image_tag(slide.image.url(:medium), class: "img-responsive"), slide %>
+          <% if !slide.showcasable? %>
+            </div>
+          <% end %>
           <div class="panel-body">
             <div class="actions">
               <%= link_to t('.edit'), edit_slide_path(slide) %> | 
