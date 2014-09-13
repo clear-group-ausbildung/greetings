@@ -4,7 +4,7 @@ class SlidesController < ApplicationController
   # GET /slides
   # GET /slides.json
   def index
-    @slides = Slide.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+    @slides = Slide.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 8)
   end
 
   # GET /slides/1
@@ -28,7 +28,7 @@ class SlidesController < ApplicationController
 
     respond_to do |format|
       if @slide.save
-        format.html { redirect_to @slide, notice: 'Slide was successfully created.' }
+        format.html { redirect_to @slide, notice: t('.success') }
         format.json { render :show, status: :created, location: @slide }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class SlidesController < ApplicationController
   def update
     respond_to do |format|
       if @slide.update(slide_params)
-        format.html { redirect_to @slide, notice: 'Slide was successfully updated.' }
+        format.html { redirect_to @slide, notice: t('.success') }
         format.json { render :show, status: :ok, location: @slide }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class SlidesController < ApplicationController
   def destroy
     @slide.destroy
     respond_to do |format|
-      format.html { redirect_to slides_url, notice: 'Slide was successfully destroyed.' }
+      format.html { redirect_to slides_url, notice: t('.success') }
       format.json { head :no_content }
     end
   end

@@ -5,7 +5,7 @@ class Appointment < ActiveRecord::Base
   validates :external_participant_name, :external_participant_company, :clear_group_employee_name, length: { maximum: 50 }
   validate :validate_conditional_employee_salutation
   validate :validate_conditional_employee_name
-  
+
   # Defines boundaries within a appointment begin has to be, compared to +Time.now+, to be qualified for displaying.
   #
   # ==== Examples:
@@ -104,14 +104,14 @@ class Appointment < ActiveRecord::Base
 
   # Returns a formatted String which merges the +begin_date+ and the +begin_time+ of an +Appointment+.
   # The format is localized by the default locale.
-  # See: 
+  # See:
   # * +config/application.rb+ => +config.i18n.default_locale+
   #
   # ==== Example:
-  # 
-  #   Freitag, 13. Juni 2014, 04:20 Uhr 
+  #
+  #   Freitag, 13. Juni 2014, 04:20 Uhr
   def formatted_begin
-    formatted_date_time begin_date, begin_time 
+    formatted_date_time begin_date, begin_time
   end
 
   # Returns the merged appointment begin date and time.

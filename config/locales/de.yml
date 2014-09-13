@@ -71,6 +71,12 @@ de:
       appointments: "Termine"
       edit_appointment: "Termin anlegen / bearbeiten"
       view_appointment: "Termindetails"
+    create:
+      success: "Der Termin wurde erfolgreich angelegt."
+    update:
+      success: "Der Termin wurde erfolgreich geändert."
+    destroy:
+      success: "Der Termin wurde erfolgreich gelöscht."
   layouts:
     header:
       sign_up: "Registrieren"
@@ -112,3 +118,9 @@ de:
       destroy: "Löschen"
       confirm: "Wollen Sie das Bild wirklich löschen?"
       new_slide: "Neues Bild"
+    create:
+      success: "Das Bild wurde erfolgreich hochgeladen."
+    update:
+      success: "Das Bild wurde erfolgreich bearbeitet."
+    destroy:
+      success: "Das Bild wurde erfolgreich gelöscht."
