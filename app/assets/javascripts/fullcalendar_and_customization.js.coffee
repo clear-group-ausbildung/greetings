@@ -1,7 +1,7 @@
 "use strict"
 $(document).ready ->
   $("#calendar").fullCalendar
-    
+
     header:
       left: "prev,next prevYear,nextYear today"
       center: "title"

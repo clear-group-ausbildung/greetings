@@ -12,15 +12,15 @@ module Timeable
 
   # Returns a formatted String which merges the +begin_date+ and the +begin_time+ of an +Appointment+.
   # The format is localized by the default locale.
-  # Params: 
+  # Params:
   # +date+:: the date
   # +time+:: the time
   #
   # ==== Example:
-  # 
-  #   Freitag, 13. Juni 2014, 04:20 Uhr 
   #
-  # See: 
+  #   Freitag, 13. Juni 2014, 04:20 Uhr
+  #
+  # See:
   # * +config/application.rb+ => +config.i18n.default_locale+
   def formatted_date_time date, time
     date_time = merge_date_time date, time
@@ -34,7 +34,7 @@ module Timeable
   # To be able to compare just the time parts of the given +time+ against +Time.now+,
   # +time+ and +Time.now+ get their date resetted beforehand.
   #
-  # See: 
+  # See:
   # * +reset_date_for_time_now+
   # * +reset_date_for_time+
   def time_before_now? time
@@ -50,9 +50,9 @@ module Timeable
   # To be able to compare just the time parts of the given +time+ against +Time.now+,
   # +time+ and +Time.now+ get their date resetted beforehand.
   #
-  # See: 
+  # See:
   # * +reset_date_for_time_now+
-  # * +reset_date_for_time+   
+  # * +reset_date_for_time+
   def time_right_now? time
     time_now_with_resetted_date = reset_date_for_time_now
     time_with_resetted_date = reset_date_for_time time
@@ -66,9 +66,9 @@ module Timeable
   # To be able to compare just the time parts of the given +time+ against +Time.now+,
   # +time+ and +Time.now+ get their date resetted beforehand.
   #
-  # See: 
+  # See:
   # * +reset_date_for_time_now+
-  # * +reset_date_for_time+ 
+  # * +reset_date_for_time+
   def time_after_now? time
     time_now_with_resetted_date = reset_date_for_time_now
     time_with_resetted_date = reset_date_for_time time
@@ -116,12 +116,12 @@ module Timeable
 
   # Returns a +String+ representation of a the given +time+.
   # in the format +'%H:%M:%S'+.
-  # 
+  #
   # ==== Example:
   #
   #   Time.now.time_as_s # => '04:20:42'
   def time_as_s time
-    time.strftime('%H:%M:%S') 
+    time.strftime('%H:%M:%S')
   end
 
   # Returns a +Time+ object for the given +string+.
@@ -133,13 +133,13 @@ module Timeable
 
   # Returns a +DateTime+ object, combining the given +date+ and +time+.
   # Params:
-  # +date+:: the date part 
+  # +date+:: the date part
   # +time+:: the time part
   #
   # A new +DateTime+ object gets created and is initialized with the +year+, +month+ and +day+ of the given +date+,
   # and the +hour+, +minute+ and +second+ of the given +time+.
   def merge_date_time date, time
     DateTime.new(date.year, date.month, date.day, time.hour, time.min, time.sec)
-  end   
+  end
 
 end

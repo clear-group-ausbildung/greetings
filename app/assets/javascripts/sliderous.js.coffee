@@ -46,4 +46,3 @@ $.fn.delay = (time) ->
       return
     ), time
     return
-

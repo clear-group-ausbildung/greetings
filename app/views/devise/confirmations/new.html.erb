@@ -1,7 +1,7 @@
 <div class="panel panel-default">
-  <div class="panel-heading"> 
+  <div class="panel-heading">
     <h2><%= t('.resend_confirmation_instructions', default: 'Resend confirmation instructions') %></h2>
-  </div> <!-- /.panel-heading --> 
+  </div> <!-- /.panel-heading -->
 
   <div class="panel-body">
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>

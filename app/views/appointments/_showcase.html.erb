@@ -17,7 +17,7 @@
             </h1>
         </div> <!-- ./col greeting_column -->
       </div> <!-- ./row greeting_row -->
-      <% if @appointments %>      
+      <% if @appointments %>
         <% @appointments.each do |appointment| %>
           <% if appointment %>
             <div class="row" id="one_appointment_row">
@@ -35,13 +35,13 @@
                     <h3 class="scaled">Bei <%= appointment.clear_group_employee_vocalized_salutation %> <%= appointment.clear_group_employee_name %></h3>
                   </div> <!-- ./col employee_column -->
                 </div> <!-- ./row employee_row -->
-              <% end %> 
+              <% end %>
             </div> <!-- ./row one_appointment_row -->
-          <% end %> 
+          <% end %>
         <% end %>
       <% end %>
     </div> <!-- ./row refreshable -->
-  </div> <!-- ./jumbotron --> 
+  </div> <!-- ./jumbotron -->
 </div> <!-- ./row jumbotron_row -->
 <div class="row" id="date_time_row">
   <div class="col-xs-2 col-md-2 col-md-offset-10" id="date_time_column">

@@ -15,7 +15,7 @@
     appendZero = (num) ->
       return "0" + num  if num < 10
       num
-    
+
     refreshTime = ->
       now = getTime()
       $("#date").html now.day + ", " + now.date + ". " + now.month
@@ -46,7 +46,7 @@
       "November"
       "Dezember"
     ]
-    
+
     refreshTime()
     setInterval refreshTime, 1000
     return
