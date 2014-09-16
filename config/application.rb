@@ -20,6 +20,9 @@ module CgWelcomeScreen
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :de
 
+    # Use Rack::Deflater for compression
+    config.middleware.use Rack::Deflater
+
     config.action_controller.perform_caching = false
   end
 end
