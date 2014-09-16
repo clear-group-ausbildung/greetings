@@ -13,6 +13,8 @@ de:
         external_participant_company: "Teilnehmer Firma"
         clear_group_employee_salutation: "Clear Group Mitarbeiter Anrede"
         clear_group_employee_name: "Clear Group Mitarbeiter Name"
+      slide:
+        image: "Bild"
   appointments:
     calendar:
       heading: "Kalender"
