@@ -38,6 +38,8 @@ gem 'devise-i18n-views', '~> 0.2.8'
 gem 'fullcalendar-wrapper-rails', '~> 2.0.3'
 # Include MomentJS required for FullCalendar
 gem 'momentjs-rails', '~> 2.6.0'
+# Include Masonry Gem
+gem 'jquery-masonry-rails', '~> 3.0.2'
 # Include jQuery qTip2 for tooltips
 gem 'jquery-qtip2-wrapper-rails', '~> 2.2.0'
 # Include pagination gem
@@ -46,8 +48,6 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 # Include paperclip for image upload
 gem 'paperclip', '~> 4.2.0'
-# Include Masonry Gem
-gem 'masonry-rails', '~> 0.2.1'
 # Include Gon Gem
 gem 'gon', '~> 5.2.0'
 # Include i18n Gem for internationalisation

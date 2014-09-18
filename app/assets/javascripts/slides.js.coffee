@@ -1,9 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-
-$ ->
-  $('#slides').imagesLoaded ->
-    $('#slides').masonry
-      itemSelector: '.box'
-      isFitWidth: true
+"use strict"
+$(document).ready ->
+  $container = $("#slides").masonry()
+  $container.imagesLoaded ->
+    $container.masonry
+      columnWidth: 200
+      itemSelector: "slides.slide"
+    return
+  return

@@ -5,13 +5,15 @@
 
   <div class="panel-body">
 
-    <div id="slides" class="transitions-enabled">
+    <div id="slides" class="js-masonry">
       <% @slides.each do |slide| %>
         <div class="box panel panel-default">
           <% if !slide.showcasable? %>
             <div class="hero-unit">
           <% end %>
-          <%= link_to image_tag(slide.image.url(:medium), class: "img-responsive"), slide %>
+          <div id="slides.slide">
+            <%= link_to image_tag(slide.image.url(:medium), class: "img-responsive"), slide %>
+          </div>
           <% if !slide.showcasable? %>
             </div>
           <% end %>
