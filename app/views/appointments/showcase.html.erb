@@ -1,6 +1,6 @@
 <div id="showcase">
   <%= render 'appointments/showcase' %>
 </div>
-<div  id="pictures">
+<%= content_tag "div", id: "pictures", data: { pictures: Slide.where(showcasable: true).map{ |k,v| k.image_file_name = k.image.url } } do %>
   <img class="all-center is-Image" id="picture"/>
-</div>
+<% end %>
