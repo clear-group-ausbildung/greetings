@@ -48,8 +48,6 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 # Include paperclip for image upload
 gem 'paperclip', '~> 4.2.0'
-# Include Gon Gem
-gem 'gon', '~> 5.2.0'
 # Include i18n Gem for internationalisation
 gem 'rails-i18n', '~> 4.0.0'
 # bundle exec rake doc:rails generates the API under doc/api.

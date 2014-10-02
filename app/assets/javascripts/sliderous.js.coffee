@@ -31,8 +31,6 @@ constFade = 2000
 constWsDelay = 5000
 constPicDelay = 5000
 thePictures = []
-for theSlide in gon.slides
-  thePictures.push theSlide.image_file_name
 
 $(document).ready ->
   runSlide()  if thePictures.length > 0

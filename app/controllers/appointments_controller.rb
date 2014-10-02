@@ -12,9 +12,6 @@ class AppointmentsController < ApplicationController
   # GET /appointments/showcase
   def showcase
     @appointments = Appointment.all_showcase
-    @slides = Slide.where(showcasable: true)
-    @slides.map{ |k,v| k.image_file_name = k.image.url }
-    gon.slides = @slides
   end
 
   # GET /appointments/help
