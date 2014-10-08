@@ -1,7 +1,7 @@
 "use strict"
 FADE = 2000
-WS_DELAY = 5000
-PIC_DELAY = 5000
+WS_DELAY = 60000
+PIC_DELAY = 20000
 
 pictures_data = []
 pictures_counter = 0
