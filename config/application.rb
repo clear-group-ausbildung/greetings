@@ -21,7 +21,7 @@ module CgWelcomeScreen
     config.i18n.default_locale = :de
 
     # Use Rack::Deflater for compression
-    config.middleware.use Rack::Deflater
+    # config.middleware.use Rack::Deflater
 
     config.action_controller.perform_caching = false
   end
