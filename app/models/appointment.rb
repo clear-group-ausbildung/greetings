@@ -63,7 +63,7 @@ class Appointment < ActiveRecord::Base
     else
       Date.today.strftime('%d.%m.%Y')
     end
-  end 
+  end
 
   # Validates the clear_group_employee_salutation
   def validate_conditional_employee_salutation
@@ -98,7 +98,8 @@ class Appointment < ActiveRecord::Base
     [
       ['Keine Auswahl', ''],
       ['Herr', 'Herr'],
-      ['Frau', 'Frau']
+      ['Frau', 'Frau'],
+      ['Firma', 'Firma']
     ]
   end
 
